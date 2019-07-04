@@ -1,2 +1,0 @@
-# sergeyzhur.github.io
-bootstrap
