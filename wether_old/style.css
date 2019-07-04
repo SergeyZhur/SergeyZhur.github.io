@@ -1,0 +1,413 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    background: url(../Pots/img/wave.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.logo span {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-left: 40px;
+}
+.menu li{
+    margin-right: 60px;
+   
+}
+.menu {
+    
+    margin-left: 150px;
+    
+}
+.menu li span {
+    color: white;
+     font-size: 18px;
+    font-weight: 300;
+}
+.navbar-toggler {
+    border: none;
+}
+.icons i {
+    font-size: 25px;
+    color: white;
+    margin-right: 40px;
+  
+}
+
+.icons {
+    
+}
+
+.text {
+    margin-top: 120px;
+   
+    
+}
+
+.text h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+   
+}
+.text p {
+    
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+.btn {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    width: 155px;
+    height: 50px;
+    color: white;
+}
+.btn_1 {
+background:#fc6a42;
+}
+.btn_2 {
+    background: #4466c9;
+}
+.iphone {
+    text-align: center;
+}
+.iphone img {
+width: 75%;
+
+margin-top: 80px;
+
+}
+
+.text_2 {
+    text-align: center;
+}
+.text_2 h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #648cff;
+    margin-top: 80px;
+}
+.text_2 p {
+    color: #999999;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+
+
+.items_3 {
+    margin-top: 120px;
+}
+
+.three_items h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: black;
+  padding-left: 20px;
+ display: inline;
+}
+.three_items p {
+     overflow: hidden;
+    font-size: 16px;
+    color: #aeaeae;
+    font-weight: 300;
+    padding-left: 20px;
+}
+.three_items img{
+    float: left;
+}
+
+
+.section_3 h1 {
+font-size: 36px;
+font-weight: 700;
+color: #648cff;
+text-align: center;
+}
+.section_3 p {
+font-size: 18px;
+font-weight: 300;
+color: #999999;
+text-align: center;
+margin-bottom: 60px;
+
+}
+.section_3 {
+    margin-top:180px;
+   
+}
+.carousel-item {
+    height: 400px;
+}
+
+
+.section_4_zagolovok h1 {
+text-align: center;
+margin-top: 50px;
+font-size: 36px;
+font-weight: 700;
+color: #648cff;
+}
+.section_4_zagolovok p {
+   font-size: 18px;
+   color: #999999;
+   font-weight: 300;
+    text-align: center;
+}
+
+.section_4_iphone {
+    margin-top: 120px;
+    
+   
+}
+.section_4_iphone_img {
+    width: 375px;
+  margin-left: -50px;
+    margin-top: -100px;
+    
+    
+   
+}
+
+.section_4_block_2 {
+   margin-top: 50px;
+   
+}
+.section_4_block_2 h1 {
+   margin-left: -60px;
+font-size: 36px;
+font-weight: 500;
+color: #648cff;
+margin-bottom: 20px;
+margin-top: 20px;
+}
+
+.section_4_block_2 p {
+   margin-left: -60px;
+font-size: 18px;
+font-weight: 300;
+margin-bottom: 20px;
+margin-top: 20px;
+}
+.section_4_block_2 img {
+   margin-left: -60px;
+
+}
+
+
+
+.section_5 {
+    margin-top: 150px;
+}
+.section_5_block_1 img {
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+.section_5_block_2 img  {
+   margin-left: 10px;
+}
+.section_5_block_1 h1 {
+     
+font-size: 36px;
+font-weight: 500;
+color: #648cff;
+margin-bottom: 20px;
+
+}
+.section_5_block_2 p {
+font-size: 18px;
+font-weight: 300;
+}
+.section_5_block_2 img {
+  width: 375px;
+ 
+}
+
+
+
+
+
+
+.section_6 {
+    margin-top: 100px;
+}
+.section_6_block_1 img {
+    width: 375px;
+}
+.section_6_block_2 img {
+    margin-top: 90px;
+}
+.section_6 h1 {
+font-size: 36px;
+font-weight: 500;
+color: #648cff;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.section_6 p {
+    font-size: 18px;
+font-weight: 300;
+}
+
+
+.section_7 {
+    background: #648cff;
+    height: 70vh;
+    margin-top: 100px;
+}
+
+
+.section_7_block1 h1 {
+    font-size: 36px;
+font-weight: 500;
+color: white;
+margin-top: 90px;
+
+}
+.section_7_block1 p {
+    font-size: 18px;
+font-weight: 300;
+color: white;
+
+}
+
+.section_7_block2 img {
+    width: 375px;
+  
+    margin-top: 70px;
+   
+}
+
+
+
+
+
+.section_8__1 {
+    margin-top: 60px;
+    border:#434769 solid 1px;
+    margin-bottom: 20px;
+}
+.section_8 {
+    background: #353854;
+    height: 45vh;
+}
+.logo_2 {
+    margin-top: 110px;
+}
+
+.section_8_block1 {
+
+}
+
+.section_8_block2  {
+  margin-top: 110px;
+}
+.section_8_block2 ul {
+    margin-top: -5px;
+    margin-left: 10px;
+}
+.section_8_block2 li {
+ margin-right: 0px;
+ text-align: center;
+}
+.section_8_block2 li a {
+ color: #b5b5c8;
+     font-size: 18px;
+    font-weight: 300;
+    
+}
+.section_8_block3 {
+    margin-top: 110px;
+}
+.section_8_block3 i {
+     font-size: 25px;
+    color: #b5b5c8;
+     margin-right: 40px;
+    
+}
+
+
+
+
+
+
+
+.section_8__ span {
+    margin-left: 600px;
+    color:#565b87;
+}
+
+ @media only screen and (max-width: 1200px) {
+
+}
+@media only screen and (max-width: 992px) {
+.section_4_iphone {
+    text-align: center;
+    margin-left: 60px;
+}
+.section_4_block_2 {
+text-align: center;
+margin-left: 100px;
+}
+}
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width:767px) {
+    .iphone img {
+        display: none;
+    }
+    .icons i {
+        display: none;
+    }
+
+}
+
+
+  @media only screen and (max-width:576px) {
+.Logos{
+ margin: auto;
+}
+.icons i {
+    display: none;
+}
+.iphone img {
+    display: none;
+}
+.text {
+    text-align: center;
+    
+}
+.text h1 {
+    font-size: 55px;
+}
+}
+
+@media only screen and (max-width: 480px) {
+    .text h1 {
+        font-size: 40px;
+    }
+    .text p {
+        font-size: 14px;
+    }
+    
+}
+@media only screen and (max-width: 364px) {
+.btn_2 {
+    margin-top: 20px;
+}
+  }
+  @media only screen and (max-width: 320px) {
+
+  }
+  

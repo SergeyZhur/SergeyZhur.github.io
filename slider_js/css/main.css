@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+	background:rgba(75,75,75);
+}
+.slideshow-container{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+.slideshow-item{
+	height: 100%;
+	width: 100%;
+	background-color: green;
+	position: relative;
+	display: none;
+}
+/*.slideshow-item:first-child{
+	display: block;
+}*/
+.slideshow-item::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(36,36,36, .6);
+}
+.slideshow-item__title,.slideshow-item__text{
+	position: absolute;
+	color:#fff;
+}
+
+.slideshow-item__img{
+	width: 100%;
+	height: 100%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 35%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.prev{
+	left:3%;
+}
+.next {
+  right: 3%;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.8s;
+  animation-name: fade;
+  animation-duration: 1.8s;
+}
+
+
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.gallery-row{
+	display: flex;
+	height: 30%;
+	position: absolute;
+	/*top: 70%;*/
+	top:98%;
+	transition: top .8s ease;
+	left: 0;
+	border-top: 20px solid #2C2C2C;
+	z-index: 6;
+}
+.gallery-row:hover{
+	transition: .8s ease;
+	top: 70%;
+}
+.gallery-row:hover span{
+	transition: opacity .5s;
+	opacity: 1;
+}
+.gallery-row span{
+	position: absolute;
+	left: 50%;
+	top:-12%;
+	transform: translate(-50%, -50%);
+	color:#fff;
+	font-weight: 800;
+	font-size: 30px;
+	text-transform: uppercase;
+	cursor: pointer;
+	z-index: 7;
+	transform: rotate(90deg);
+	transition: transform .3s;
+	opacity: .5;
+
+}
+.gallery-row span:hover{
+	transition: opacity .5s;
+	opacity: 1;
+	
+}
+.gallery-row__linkImg{
+	width: 25%;
+	opacity: .4; 
+
+}
+.gallery-row a:hover{
+	opacity: .6;
+	transition: .5s;
+
+}
+.gallery-row__img{
+	width: 100%;
+	height: 100%;
+}
+.active{
+	transition: 1s;
+	opacity: 1;
+}
