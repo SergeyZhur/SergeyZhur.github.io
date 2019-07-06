@@ -3,10 +3,11 @@ html,body,header, #intro{
 }
 #intro{
     background: url(../img/photo.jpeg) no-repeat center center;
-    /* fixed добавлял выше  -webkit- для bg size
+    /* 
+    в background url  был после center еще добавлено  fixed
      */
-    background-size: cover;
-
+  
+/* тут было добавлено -webkit-   background-size: cover; */
     background-size: cover;
 }
 .top-nav-collapse {
