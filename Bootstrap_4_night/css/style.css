@@ -2,8 +2,11 @@ html,body,header, #intro{
     height: 100%;
 }
 #intro{
-    background: url(../img/photo2.jpeg) no-repeat center center fixed;
-    -webkit-background-size: cover;
+    background: url(../img/photo.jpeg) no-repeat center center;
+    /* fixed добавлял выше  -webkit- для bg size
+     */
+    background-size: cover;
+
     background-size: cover;
 }
 .top-nav-collapse {
