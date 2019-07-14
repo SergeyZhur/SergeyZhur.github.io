@@ -1,7 +1,58 @@
 body {
+  margin: 0 auto;
+  max-width: 1260px;
+}
+body a.arrowDown {
+  font-size: 30px;
+  text-decoration: none;
+  color: #fc635e;
+  border: 1px solid #fc635e;
   display: flex;
-  justify-content: space-around;
-  margin-top: 0;
+  justify-content: center;
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+body a.arrowDown:hover {
+  background: #fc635e;
+  color: white;
+}
+body a.btn {
+  color: #fc635e;
+  text-decoration: none;
+  font-size: 22px;
+  border: 2px solid #fc635e;
+  padding: 12px 28px;
+  border-radius: 8px;
+}
+body a.btn:hover {
+  background: #fc635e;
+  color: white;
+}
+body .mainText {
+  text-align: center;
+}
+body .mainText h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+  color: white;
+}
+body .mainText h1 span {
+  color: #fc635e;
+}
+body .mainText p {
+  color: white;
+  font-size: 22px;
+}
+body h1.main_header {
+  text-decoration: none;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+body h1.main_header span {
+  color: #fc635e;
 }
 body header {
   background: url('../img/background.png') no-repeat;
@@ -48,48 +99,40 @@ body header nav menu li a:hover {
   border-bottom: #fc635e solid 5px;
   padding-bottom: 3px;
 }
-body header .mainText {
+body .recive {
+  margin-top: 0;
   text-align: center;
+  background: white;
+  padding: 70px 50px 10px 50px;
+  color: #868686;
 }
-body header .mainText h1 {
+body .recive p {
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+body .icons {
+  display: flex;
+}
+body .icons h3 {
+  text-decoration: underline;
   text-transform: uppercase;
-  font-size: 50px;
-  color: white;
 }
-body header .mainText h1 span {
-  color: #fc635e;
+body .icons p {
+  font-size: 18px;
 }
-body header .mainText p {
-  color: white;
-  font-size: 22px;
+body .icons div {
+  padding: 15px;
 }
-body header .mainText a {
-  color: #fc635e;
-  text-decoration: none;
-  font-size: 22px;
-  border: 2px solid #fc635e;
-  padding: 12px 28px;
-  border-radius: 8px;
+body .expand {
+  padding: 100px 100px 15px 100px;
+  background: url(../img/expand.png) no-repeat;
 }
-body header .mainText a:hover {
-  background: #fc635e;
-  color: white;
+body .expand .mainText {
+  padding: 50px;
+  margin-bottom: 80px;
+  border: 15px solid rgba(0, 0, 0, 0.2);
 }
-body header .botHeader {
-  display: flex;
-  justify-content: center;
-}
-body header .botHeader a {
-  font-size: 30px;
-  text-decoration: none;
-  color: white;
-  border-radius: 50%;
-  background: #fc635e;
-  display: flex;
-  width: 45px;
-  height: 45px;
-  justify-content: center;
-}
-body header .botHeader a:hover {
-  opacity: .7;
+body .expand .mainText h1 {
+  font-size: 55px;
+  margin-bottom: 50px;
 }
