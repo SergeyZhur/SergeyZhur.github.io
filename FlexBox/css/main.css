@@ -162,3 +162,147 @@ body .our_process .back_process {
   background-size: contain;
   background-repeat: no-repeat;
 }
+body .wedoOne {
+  padding: 25px;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .wedoOne .container {
+  display: flex;
+  justify-content: space-around;
+}
+body .wedoOne h1,
+body .wedoOne h2,
+body .wedoOne p {
+  color: gray;
+}
+body .wedoOne h1 {
+  text-decoration: underline;
+}
+body .wedoOne p {
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+body .wedoOne h2 {
+  text-transform: uppercase;
+  border-left: 10px solid #fc635e;
+  padding-left: 5px;
+}
+body .wedoOne .left {
+  max-width: 50%;
+}
+body .wedoOne .right {
+  max-width: 50%;
+}
+body .wedoTwo {
+  background: none;
+}
+body .wedoOne .container .right {
+  order: 1;
+  max-width: 50%;
+}
+body .wedoTwo .container .left {
+  order: 2;
+  max-width: 50%;
+  margin-bottom: 30px;
+}
+body .wedoTwo .container .left h2,
+body .wedoTwo .container .left p,
+body .wedoTwo .container .left .btn_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+body .wedoTwo .container .left h2 {
+  border-right: #fc635e solid 10px;
+  padding-right: 5px;
+  border-left: none;
+}
+body .portfolio {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 30px;
+}
+body .portfolio .btn {
+  margin: 40px 0px;
+}
+body .portfolio h1 {
+  margin: 50px 0px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #b1b1b1;
+  color: gray;
+}
+body .portfolio .controls {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 25px;
+  border-top: 3px gray solid;
+  border-bottom: 3px gray solid;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+body .portfolio .controls button {
+  color: #fc635e;
+  background: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 22px;
+}
+body .portfolio .controls button:hover {
+  color: #e44640;
+  cursor: pointer;
+}
+body .portfolio .container-filter {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+body .portfolio .container-filter #ex1 {
+  background-image: url(../img/1.png);
+}
+body .portfolio .container-filter #ex2 {
+  background-image: url(../img/2.png);
+}
+body .portfolio .container-filter #ex3 {
+  background-image: url(../img/3.png);
+}
+body .portfolio .container-filter #ex4 {
+  background-image: url(../img/4.png);
+}
+body .portfolio .container-filter #ex5 {
+  background-image: url(../img/5.png);
+}
+body .portfolio .container-filter #ex6 {
+  background-image: url(../img/6.png);
+}
+body .portfolio .container-filter div {
+  background-size: cover;
+  background-position: center center;
+  margin: 10px;
+  width: 300px;
+  height: 180px;
+}
+body .portfolio .container-filter div .fil {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  display: none;
+  position: relative;
+  margin: 0;
+  background: url(../img/plus.png) rgba(255, 72, 72, 0.75);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .portfolio .container-filter div .fil p {
+  margin: 0;
+  padding: 10px;
+}
+body .portfolio .container-filter div:hover .fil {
+  cursor: pointer;
+  display: block;
+}
