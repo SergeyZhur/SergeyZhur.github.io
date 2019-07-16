@@ -8,6 +8,9 @@
 	<title>Верстка на флекс</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/main.js"></script>
+	
 </head>
 
 <body>
@@ -15,10 +18,10 @@
 		<nav>
 			<a href="" class="logo"><img src="img/logo.png" alt="">Daisy</a>
 			<menu>
-				<li><a href="">About</a></li>
-				<li><a href="">Portfolio</a></li>
-				<li><a href="">Services</a></li>
-				<li><a href="">Contact</a></li>
+				<li><a href="#recive">About</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#our_process">Services</a></li>
+				<li><a href="#our_team">Contact</a></li>
 			</menu>
 		</nav>
 		<div class="mainText">
@@ -26,9 +29,9 @@
 			<p>Lorem, ipsum dolor elit. fficia porro at quidem perferendis.</p>
 			<a href="" class="btn">I want client</a>
 		</div>
-			<a href="" class="arrowDown">&darr;</a>
+			<a href="#recive" class="arrowDown">&darr;</a>
 	</header>
-	<section class="recive">
+	<section class="recive" id="recive">
 		<h1 class="main_header">What can <span>you receive?</span></h1>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 			Accusamus, dicta. Voluptatem, cumque magnam labore, soluta
@@ -56,18 +59,18 @@
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aut?</p>
 			</div>
 		</div>
-		<a href="" class="arrowDown">&darr;</a>
+		<a href="#expand" class="arrowDown">&darr;</a>
 	</section>
 	<!-- new block expand -->
-	<section class="expand">
+	<section class="expand" id="expand">
 		<div class="mainText">
 		<h1 class="main_header"><span>Expand</span> your business</h1>
 		<a href="" class="btn">Join us</a>
 		</div>
-		<a href="" class="arrowDown">&darr;</a>
+		<a href="#our_process" class="arrowDown">&darr;</a>
 	</section>
 	<!-- new section our_process -->
-	<section class="our_process">
+	<section class="our_process" id="our_process">
 		<h1 class="main_header">Our <span>process</span></h1>
 		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
 		 Odit laudantium ducimus totam! Explicabo quae rerum ad asp
@@ -89,11 +92,11 @@
 		 	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, neque?</p>
 		 </div>
 		<div class="back_process"></div>
-		<a href="" class="arrowDown">&darr;</a>
+		<a href="#wedoOne" class="arrowDown">&darr;</a>
 	</section>
 
 	<!-- new section what do we do -->
-	<section class="wedoOne">
+	<section class="wedoOne" id="wedoOne">
 		<h1 class="main_header">What do <span>we do?</span></h1>
 	<div class="container">
 <div class="left">
@@ -109,9 +112,9 @@
 	<img src="img/we_do_1.png" alt="">
 </div>
 	</div>
-		<a href="" class="arrowDown">&darr;</a>
+		<a href="#wedoTwo" class="arrowDown">&darr;</a>
 	</section>
-		<section class="wedoOne wedoTwo">
+		<section class="wedoOne wedoTwo" id="wedoTwo" >
 			<div class="container">
 				<div class="left left_2">
 					<h2>Advertising</h2>
@@ -126,9 +129,9 @@
 					<img src="img/we_do_2.png" alt="">
 				</div>
 			</div>
-			<a href="" class="arrowDown">&darr;</a>
+			<a href="#wedoThree" class="arrowDown">&darr;</a>
 		</section>
-	<section class="wedoOne wedoThree">
+	<section class="wedoOne wedoThree" id="wedoThree" >
 		<div class="container">
 			<div class="left">
 					<h2>Marketing kit</h2>
@@ -143,10 +146,10 @@
 				<img src="img/we_do_3.png" alt="">
 			</div>
 		</div>
-		<a href="" class="arrowDown">&darr;</a>
+		<a href="#portfolio" class="arrowDown">&darr;</a>
 	</section>
 	<!-- section portfolio -->
-	<section class="portfolio">
+	<section class="portfolio" id="portfolio">
 			<h1 class="main_header">Portfolio</h1>
 <div class="controls">
 	<button type="button" data-filter="all">All</button> /
@@ -164,10 +167,86 @@
 	<div id="ex6" class="mix category-bs"><div class="fil"><p>Business 2</p></div></div>
 </div>
 	<a href="" class="btn">I want landing page</a>
-	<a href="" class="arrowDown">&darr;</a>
+	<a href="#our_team" class="arrowDown">&darr;</a>
+	</section>
+	<!-- team div -->
+	<section class="our_team" id="our_team">
+		<h1 class="OurTeam">Our<span> team</span></h1>
+		<div class="wrap">
+			<div class="marketing team">
+				<img src="img/marketing.png" alt="">
+				<h3><span>Tomothy</span> Bowman</h3>
+				<p>Marketing</p>
+				<a href="#">
+         <span class="fa-stack fa-2x">
+         	<i class="fas fa-circle fa-stack-2x"></i>
+         <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+				 </span>
+				 </a>
+				 <a href="#">
+				 <span class="fa-stack fa-2x">
+				 	<i class="fas fa-circle fa-stack-2x"></i>
+				 	<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+				 </span>
+				 </a>
+				 <a href="#">
+				 <span class="fa-stack fa-2x">
+				 	<i class="fas fa-circle fa-stack-2x"></i>
+				 	<i class="fab fa-vk fa-stack-1x fa-inverse"></i>
+				 </span>
+				 </a>
+			</div>
+			<div class="ceo team">
+				<img src="img/ceo.png" alt="">
+				<h3><span>Steve</span> Trace</h3>
+				<p>CEO</p>
+						<a href="#">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+						<a href="#">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+						<a href="#">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-vk fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+			</div>
+			<div class="clients team">
+				<img src="img/clients.png" alt="">
+				<h3><span>Hellen</span> Jonhs</h3>
+				<p>Clients</p>
+						<a href="#">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+						<a href="#">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+						<a href="#">
+							<span class="fa-stack fa-2x">
+								<i class="fas fa-circle fa-stack-2x"></i>
+								<i class="fab fa-vk fa-stack-1x fa-inverse"></i>
+							</span>
+						</a>
+			</div>
+		</div>
 	</section>
 	<script src="js/mixitup.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="https://kit.fontawesome.com/a6db7f4ef2.js"></script>
 </body>
 
 </html>
