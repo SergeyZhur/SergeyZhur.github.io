@@ -134,7 +134,8 @@ text-align: center;
 padding-top: 120px;
 padding-bottom: 135px;
 }
-.portfolio button:hover {
+.portfolio button:hover,
+.focused {
   color: black;
   background: transparent;
 border: 2px solid #00897b;
@@ -144,4 +145,21 @@ border: 2px solid #00897b;
 }
 .filter {
   padding: 120px 0;
+}
+div[filter]:hover img {
+  filter:brightness(50%);
+  transition: 0.3s;
+}
+.text {
+  display: none;
+}
+div[filter]:hover .text {
+  display: block;
+  width:100%;
+  color: #fff;
+  position: absolute;
+  top:40%;
+  left: 0;
+  z-index: 3;
+  text-align: center;
 }
