@@ -164,19 +164,19 @@
        <h2 class="about__title">Latest Works</h2>
        <p class="about__text ">Lorem ipsum dolor sit, Lorem ipsum dolor sit amet. amet consectetur adipisicing elit.
          Possimus, distinctio.</p>
-         <button class="button ">All</button>
-         <button class="button ">Web desing</button>
-         <button class="button ">Ui/UX design</button>
-         <button class="button ">Mockups</button>
+         <button val="on" class="button " filter="all">All</button>
+         <button val="off" class="button " filter="wd">Web desing</button>
+         <button val="off" class="button " filter="ud">Ui/UX design</button>
+         <button val="off"class="button " filter="moc">Mockups</button>
      </div>
     </div>
     <div class="row filter">
-     <div class="col-xl-4"><img src="img/works1.png" alt=""></div>
-     <div class="col-xl-4"><img src="img/works2.png" alt=""></div>
-     <div class="col-xl-4"><img src="img/works3.png" alt=""></div>
-     <div class="col-xl-4"><img src="img/works4.png" alt=""></div>
-     <div class="col-xl-4"><img src="img/works5.png" alt=""></div>
-     <div class="col-xl-4"><img src="img/works6.png" alt=""></div>
+     <div filter="wd" class="col-xl-4"><img src="img/works1.png" alt=""></div>
+     <div filter="moc" class="col-xl-4"><img src="img/works2.png" alt=""></div>
+     <div filter="wd" class="col-xl-4"><img src="img/works3.png" alt=""></div>
+     <div filter="moc" class="col-xl-4"><img src="img/works4.png" alt=""></div>
+     <div filter="ud" class="col-xl-4"><img src="img/works5.png" alt=""></div>
+     <div filter="ud" class="col-xl-4"><img src="img/works6.png" alt=""></div>
     </div>
   </div>
   <div class="row">
@@ -198,5 +198,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
