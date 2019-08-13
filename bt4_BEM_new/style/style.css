@@ -411,7 +411,8 @@ outline: none;
   text-align: center;
   font-weight: bold;
 }
-#toTop {
+/* исправил #toTop на To_Top */
+.To_Top {
   z-index: 999;
   width:40px;
   height: 40px;
