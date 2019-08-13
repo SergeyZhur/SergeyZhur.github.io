@@ -56,7 +56,7 @@ $('ul.menu a[href^="#"').click(function() {
 // выпадающие меню
 $('.menu-icon').click(function(){
   $('nav').slideToggle(500);
-  $('ul.menu').css({
+  $('nav ul.menu').css({
     'display':'flex', 'flex-direction':'column'
   })
   if($('.menu-icon').html()=='<i class="fas fa-bars"></i>') {
