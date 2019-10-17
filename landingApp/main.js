@@ -1,32 +1,35 @@
-var first = document.getElementById('one');
-var second = document.getElementById('two');
-var gogo = document.getElementById('gogo');
-var popap = document.getElementById('popap');
-var one2 = document.getElementById('one2');
+var firstItem = document.getElementById('one__item');
+var secondItem = document.getElementById('two__item');
+var scrollBarRight = document.getElementById('scrollBar-right');
+var nextImage = document.getElementById('nextImage');
 
+var oneText = document.getElementById('OneText');
+var oneHead = document.getElementById('oneHead');
 
-first.addEventListener('click', doa);
+firstItem.addEventListener('click', clickItemOne);
+function clickItemOne(evt) {
+  evt.preventDefault();
+  secondItem.classList.remove("OneBlue");
+  firstItem.classList.add("TwoPink");
+ nextImage.style.display = 'block';
+ scrollBarRight.classList.remove("ForYellow");
+ scrollBarRight.classList.add("ThreeGreen");
+ oneText.style.display = 'none';
+ oneHead.style.display = 'none';
 
-function doa() {
-  second.classList.remove("as");
-  first.classList.add("d");
-
-popap.style.display='block';
-
- gogo.classList.remove("gogo2");
- gogo.classList.add("gogo");
-
- one2.classList.add('one2');
 }
 
+secondItem.addEventListener('click', clickItemTwo);
+function clickItemTwo(evt) {
+  // Отмена действия браузера
+  // Есть два способа отменить действие браузера:
 
-second.addEventListener('click',sec);
-function sec() {
-  first.classList.remove("d");
-  second.classList.add("as");
-  
-popap.style.display='none';
-
-gogo.classList.remove('gogo');
-  gogo.classList.add('gogo2');
+  // Основной способ – это воспользоваться объектом event.Для отмены действия браузера существует стандартный метод event.preventDefault().
+  // Если же обработчик назначен через on<событие>(не через addEventListener), то также можно вернуть false из обработчика.
+evt.preventDefault();
+firstItem.classList.remove("TwoPink");
+secondItem.classList.add("OneBlue");
+nextImage.style.display = 'none';
+scrollBarRight.classList.remove('ThreeGreen');
+scrollBarRight.classList.add('ForYellow');
 }
