@@ -108,27 +108,96 @@
  </div>
 
 
- 
- <div class="slide">
-   <div class="scroll-bar__right-part right-part" id="scrollBar-right">
+ <div class="slider-wrapper">
+    <div class=" slider-heading">
+
+<!-- scroll-bar__right-part right-part -->
+
+  
+      <p class="slider__head" >Heading Feature title goes here</p>
+
+      <p class="slider__text">Lorem ipsum dolor sit amet consectetu adipisicing elit. Culpa non neque velit
+         dicta aliquid hic!Nunc accumsan hendrerit nunc,ac venenatis magna facilisis quis Lorem ipsum dolor 
+         Laudantium ut doloribus cupiditate est ullam corporis.</p>
+    </div>
+
+ <div class="slider">
+  
 
 
-     <img src="che.png" width="50%" height="auto" alt="" class="right-part__image">
-     <div class="right-part__block" id="nextImage">
-       <p class="right-part__block--head">Heading Feature title goes here ONE ONE ONE</p>
-       <p class="right-part__block-text"> ONE ONE ONE Lorem ipsum dolor sit amet consectetur
-         adipisicing elit. Culpa non neque velit dicta aliquid hic!Nunc accumsan hendrerit nunc,
-         ac venenatis magna facilisis quis Lorem ipsum dolor sit amet consectetur adipisicing elit.
-         Laudantium ut doloribus cupiditate est</p>
-     </div>
-     <p class="right-part__block--head" id="oneHead">Heading Feature title goes here</p>
 
-     <p class="right-part__block-text" id="OneText">Lorem ipsum dolor sit amet consectetur
-       adipisicing elit. Culpa non neque velit dicta aliquid hic!Nunc accumsan hendrerit nunc,
-       ac venenatis magna facilisis quis Lorem ipsum dolor sit amet consectetur adipisicing elit.
-       Laudantium ut doloribus cupiditate est ullam corporis.</p>
+   <div class="item">
+     <img src="telefonSlider.png" alt="Первый слайд">
+      <img src="telefonSlider.png" alt="Первый слайд">
+       <img src="mobile.png" alt="третий слайд">
    </div>
+   <div class="item">
+      <img src="telefonSlider.png" alt="второй слайд">
+   
+   
+    
+     
+     <img src="mobile.png" alt="третий слайд">
+     
+       <img src="telefonSlider.png" alt="второй слайд">
+    
+   
+   
+   </div>
+   <div class="item">
+       <img src="mobile.png" alt="третий слайд">
+      
+     <img src="telefonSlider.png" alt="четверг слайд">
+     
+     <img src="telefonSlider.png" alt="второй слайд">
+    
+   </div>
+
+<a  class="prev" onclick="minusSlide()">  &#10094; </a> 
+<a  class="next" onclick="plusSlide()"> &#10095;</a>
+
  </div>
+  </div>
+
+ <div class="slider-dots">
+   <span class="slider-dots_item" onclick="currentSlide(1)"></span>
+   <span class="slider-dots_item" onclick="currentSlide(2)"></span>
+   <span class="slider-dots_item" onclick="currentSlide(3)"></span>
+ </div>
+
+
+<div class="form-information">
+ <div class="form-information__header">
+    <img src="email.png" alt="" class="form-information__header--image">
+   <h3 class="form-information__header--text">Lorem ipsum dolor sit.</h3>
+ </div>
+
+  <div class="form-information__button">
+    <form action="#" class="form-information--section">
+      <input type="text" class="form-information--date">
+      <input type="submit" class="form-information--btn">
+    </form>
+  </div>
+</div>
+
+<footer class="icons">
+  <h3 class="icons__head">Lorem ipsum dolor sit amet.</h3>
+  <ul class="icons-set">
+    <li class="icons__item"> <img class="icons__item--image" src="email.png" alt=""></li>
+    <li class="icons__item"><img class="icons__item--image" src="email.png" alt=""></li>
+    <li class="icons__item"><img class="icons__item--image" src="email.png" alt=""></li>
+    <li class="icons__item"><img class="icons__item--image" src="email.png" alt=""></li>
+    <li class="icons__item"><img class="icons__item--image" src="email.png" alt=""></li>
+  </ul>
+  <ul class="icons__list">
+    <li class="icons__list--item">contact</li>
+    <li class="icons__list--item">twitter</li>
+    <li class="icons__list--item">press</li>
+    <li class="icons__list--item">support</li>
+    <li class="icons__list--item">developers</li>
+    <li class="icons__list--item">privacy</li>
+  </ul>
+</footer>
 <script src="main.js"></script>
 </body>
 </html>
