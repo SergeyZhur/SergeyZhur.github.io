@@ -181,7 +181,7 @@ border-bottom: solid 1px #505050;
 .robots__click {
   width: 320px;
   height: 320px;
-  border: solid 7px #f9f9f9;
+  border: solid 5px #f9f9f9;
 }
 
 input[type="checkbox"] {
