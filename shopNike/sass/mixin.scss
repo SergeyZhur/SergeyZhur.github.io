@@ -1,0 +1,15 @@
+@mixin ubuntuMedium {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+@mixin cormorantMedium {
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-weight: 500;
+}
+
+@mixin cormorantBold {
+  font-family: 'Cormorant Garamond',
+    sans-serif;
+  font-weight: 700;
+}
