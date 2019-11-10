@@ -1,5 +1,6 @@
 $primiry-green:#82f4d3;
-
+$green-hover:#57caaa;
+$green-active:#3b8872;
 
 @mixin ubuntuMedium {
   font-family: 'Ubuntu', sans-serif;
@@ -16,16 +17,26 @@ $primiry-green:#82f4d3;
     sans-serif;
   font-weight: 700;
 }
-
+@mixin icons {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 .header {
 background-image: url("/image/header-bg.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 max-width: 1600px;
-height: 600px;
 padding-top: 50px;
+position: relative;
+transition: 1s;
 }
+.header-background-girl {
+  background-image: url("/image/girl-header.jpg");
+  transition: 1s;
+}
+
 .navigation {
   display: flex;
   justify-content: space-around;
@@ -64,6 +75,23 @@ width:50%;
 
 }
 
+.button-active {
+  margin: auto 0;
+  margin-right: 20px;
+  width:15px;
+  height: 15px;
+  border: solid 2px #000000;
+  border-radius: 50%;
+  background: none;
+  outline: none;
+}
+.button-active__one--one {
+  margin-right: 10px;
+}
+.button-active:hover {
+  background: #ffffff;
+}
+
 .pupap-information {
  
   background: #20cf9e;
@@ -82,7 +110,7 @@ width:50%;
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: 2s ease ;
+   transition: 1s ease ;
    margin-top: -300px;
     // display: none;
 }
@@ -93,7 +121,11 @@ width:50%;
     
 //   }
 // }
+.pupap-information-girl {
+  background: #74bfe2;
+  transition: 1s;
 
+}
 
 .pupap-information__list {
   font-size: 18px;
@@ -101,12 +133,14 @@ width:50%;
  
 }
 .pupap-information__link {
-color:#000000;
+// color:#ebe9e9;
+color: #000000;
 @include ubuntuMedium;
 position: relative;
 }
 .pupap-information__link:hover {
-  color: #ffffff;
+  color: #bbff00;
+  
 }
 .pupap-information__link:active {
   color: #3b8872;
@@ -114,7 +148,7 @@ position: relative;
 }
 .pupap-information__link::before {
   content: '';
-  border-bottom: solid 3px #000000;
+  border-bottom: solid 2px #ffffff;
   position: absolute;
   width: 100px;
 border-radius: 10px;
@@ -124,7 +158,7 @@ border-radius: 10px;
 }
 .pupap-information__link::after {
   content: '';
-  border-bottom: solid 3px #000000;
+  border-bottom: solid 2px #ffffff;
   position: absolute;
   width: 100px;
   border-radius: 10px;
@@ -154,3 +188,95 @@ border-radius: 10px;
 .side-bar:active {
   background: #3b8872;
 }
+
+
+// header -middle block
+
+.header-two-block {
+ margin-left: 11%;
+ padding-top: 110px;
+  
+}
+.header-two-block__title {
+  font-size: 150px;
+  color: #242323;
+   @include cormorantBold;
+}
+.header-two-block__link-wrapper {
+  background: $primiry-green;
+  width:285px;
+  height: 55px;
+  
+  margin-left: 50px;
+}
+.header-two-block__link {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  color: #323237;
+  @include cormorantBold;
+  font-size: 25px;
+  position: relative;
+  z-index: 2;
+ 
+}
+.header-two-block__link:hover {
+  background: #57caaa;
+}
+
+.header-two-block__border {
+   width:285px;
+   height: 55px;
+   border: solid 2px $primiry-green;
+   position: absolute;
+   z-index: 1;
+      margin-top: -45px;
+      margin-left: 35px;
+  
+}
+
+
+.header-three-block {
+  display: flex;
+  justify-content: space-around;
+}
+.header-three-block__text {
+ font-size: 14px;
+ color: #8f8f8f;
+ @include ubuntuMedium;
+      padding-bottom: 27%;
+transform: rotate(-90deg);
+}
+
+.icons__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.icons__item--twitter {
+  background: #ffffff;
+ @include icons;
+ 
+}
+.icons__item--twitter:hover {
+ background: #151515;
+}
+.icons__item--facebock,
+.icons__item--google,
+.icons__item--printerest {
+  background: #151515;
+  @include icons;
+}
+.icons {
+      padding-left: 300px;
+      padding-top: 10%;
+}
+.icons__item--facebock:hover,
+.icons__item--google:hover,
+.icons__item--printerest:hover {
+  background: $green-hover;
+  
+}
+
+
