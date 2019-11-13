@@ -1,0 +1,149 @@
+$primiry-green:#82f4d3;
+$green-hover:#57caaa;
+$green-active:#3b8872;
+
+@mixin ubuntuMedium {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+
+@mixin cormorantMedium {
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-weight: 500;
+}
+
+@mixin cormorantBold {
+  font-family: 'Cormorant Garamond',
+    sans-serif;
+  font-weight: 700;
+}
+
+
+
+.footer-line {
+ margin-top: 50px;
+margin-left: auto;
+margin-right: auto;
+width:85%;
+  border-bottom: solid #eeeeee 2px;
+  
+ 
+}
+.footer {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.footer__image{
+  padding: 5px;
+}
+.footer__image:hover{
+ box-shadow: 0 0 20px 5px $green-hover;
+
+ border-radius: 5px;
+ 
+}
+.navigation-left__item {
+
+font-size: 15px;
+padding-bottom: 5px;
+}
+.navigation-left__link {
+  color: #888888;
+  @include ubuntuMedium;
+  font-weight: bold;
+}
+.navigation-left__link:hover {
+  color: #424141;
+  border-bottom: solid 2px #424141;
+}
+
+.navigation-right__item {
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+.navigation-right__link {
+  
+  @include ubuntuMedium;
+  font-weight: bold;
+  color: #888888;
+}
+.navigation-right__link:hover {
+  color: #424141;
+    border-bottom: solid 2px #424141;
+
+  }
+.date__header {
+   @include ubuntuMedium;
+ 
+   color: #888888;
+   font-weight: bold;
+}
+.date__input {
+  box-shadow: 0 0 10px 2px #1d1d1d;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+  width:300px;
+  height: 40px;
+margin-top: 30px;
+margin-bottom: 30px;
+padding-left: 40px;
+font-size: 15px;
+ 
+}
+.date__input:hover {
+  background: $primiry-green;
+}
+.date__button {
+  margin-left: 10px;
+  border: none;
+  background: $primiry-green;
+  width:140px;
+  height: 40px;
+  @include ubuntuMedium;
+  font-weight: bold;
+}
+.date__button:hover {
+background: $green-hover;
+box-shadow: 0 0 10px 2px #1d1d1d;
+}
+.date__button:active {
+  background: $green-active;
+}
+  .footer-icons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .footer-icons__link {
+    margin-right: 10px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 50px;
+       height: 50px;
+       background: #000000;
+       border-radius: 50%;
+  }
+
+  .footer-icons__link:hover {
+    background: #ffffff;
+    border: solid 2px $green-hover;
+     box-shadow: 0 0 20px 5px $green-hover;
+  
+  }
+  .footer-icons__link:active {
+    background: $green-active;
+  }
+
+  .footer-contact {
+    margin-top: 20px;
+    margin-right: 120px;
+    display: flex;
+    justify-content: flex-end;
+    @include ubuntuMedium;
+    color: #acabab;
+  }

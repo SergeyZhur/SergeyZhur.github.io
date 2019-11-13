@@ -1,0 +1,39 @@
+.we-thought { margin-top: 10%; padding-top: 5%; padding-bottom: 5%; background: #f8f8f8; text-align: center; position: relative; border-radius: 15px; }
+
+.we-thought-wrapper { display: flex; justify-content: center; align-items: center; }
+
+.we-thought-wrapper__dot { margin-top: 125px; margin-left: auto; margin-right: auto; display: flex; }
+
+.we-thought-wrapper__dot--right { margin-top: 125px; margin-left: auto; margin-right: auto; }
+
+.we-thought--slide-one { background-image: url("/image/white-1.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+
+.we-thought--slide-two { background-image: url("/image/white-2.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+
+.we-thought--slide-three { background-image: url("/image/white-3.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+
+.we-thought--slide-four { background-image: url("/image/white-4.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+
+.we-thought-wrapper__circle { border-radius: 50%; background: #82f4d3; width: 20px; height: 20px; }
+
+.we-thought-wrapper__circle:hover { background: #57caaa; }
+
+.we-thought-wrapper__circle:active { background: #3b8872; }
+
+.we-thought-wrapper__circle--right-one { margin-left: 20px; }
+
+.we-thought-wrapper__circle--right-two { margin-right: 20px; }
+
+.we-thought-wrapper__circle--left-one { margin-left: 20px; }
+
+.we-thought-wrapper__circle--left-two { margin-right: 20px; }
+
+.we-thought__header { font-family: 'Cormorant Garamond', sans-serif; font-weight: 500; font-size: 45px; color: white; }
+
+.we-thought__text { font-family: 'Ubuntu', sans-serif; font-weight: 500; font-size: 20px; color: #1b0a0a; text-align: center; padding-top: 20px; padding-bottom: 20px; }
+
+.we-thought__name { padding-bottom: 5px; color: #ffffff; font-family: 'Ubuntu', sans-serif; font-weight: 500; font-weight: bold; font-size: 20px; }
+
+.we-thought__link { display: inline-block; margin-top: 10px; font-family: 'Ubuntu', sans-serif; font-weight: 500; font-weight: bold; font-size: 20px; color: #000000; border: solid 4px #67d3b4; padding: 5px; border-radius: 2px; }
+
+.we-thought__link:hover { color: #3b8872; transition: 0.3s; }
