@@ -5,7 +5,6 @@ function clickOnButton() {
 pupap.classList.toggle('pupap-hidden');
 }
 
-
 button.addEventListener('click', clickOnButton)
 
 

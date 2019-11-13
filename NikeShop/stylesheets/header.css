@@ -1,4 +1,4 @@
-.header { background-image: url("/image/header-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; max-width: 1600px; padding-top: 50px; position: relative; transition: 1s; }
+.header { background-image: url("../image/header-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; max-width: 1600px; padding-top: 50px; position: relative; transition: 1s; }
 
 .header-background-girl { background-image: url("../image/girl-header.jpg"); transition: 1s; }
 

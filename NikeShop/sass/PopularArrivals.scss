@@ -18,15 +18,13 @@ $green-active:#3b8872;
   font-weight: 700;
 }
 
-
 .popular-arrivals__list {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-// .wrapper-items__item {
-  
-// }
+
+
 .popular-arrivals__header {
   @include cormorantMedium;
   font-size: 25px;
@@ -35,26 +33,24 @@ $green-active:#3b8872;
 }
 
 .wrapper-items__image:hover {
-  
-box-shadow: 0 0 5px #000000;
+  box-shadow: 0 0 5px #000000;
 }
-.wrapper-items__image:active {
- box-shadow: 0 0 15px $primiry-green;
-}
-.wrapper-items__text {
-padding-top: 40px;
-padding-bottom: 20px;
 
-font-size: 18px;
-@include ubuntuMedium;
+.wrapper-items__image:active {
+  box-shadow: 0 0 15px $primiry-green;
+}
+
+.wrapper-items__text {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  @include ubuntuMedium;
 }
 
 .wrapper-items__gray-text {
   color: #bbbbbb;
   padding-left: 10px;
 }
-
-
 
 .wrapper-items__price {
   font-size: 25px;

@@ -20,62 +20,58 @@ $green-active:#3b8872;
 
 
 .latest-blog {
-margin-top: 70px;
-
+  margin-top: 70px;
 }
+
 .latest-blog__header {
   text-align: center;
   @include cormorantMedium;
   font-size: 45px;
 }
+
 .blog-elements {
   position: relative;
   display: flex;
   justify-content: space-evenly;
   padding-top: 70px;
- 
 }
-// .blog-elements__left {
- 
-// }
+
 .blog-elements__border-one {
-   border-radius: 5px;
-  width:300px;
+  border-radius: 5px;
+  width: 300px;
   height: 300px;
   opacity: 0.9;
   margin-top: 30px;
-  border:solid $green-hover 3px;
+  border: solid $green-hover 3px;
   position: absolute;
   z-index: -1;
-      left: 0.5%;
-      top: 40%;
+  left: 0.5%;
+  top: 40%;
 }
+
 .blog-elements__border-two {
   position: absolute;
   z-index: -1;
-  width:300px;
+  width: 300px;
   height: 300px;
   opacity: 0.9;
   margin-top: 30px;
-  border:solid $green-active 3px;
+  border: solid $green-active 3px;
   border-radius: 5px;
   left: 20%;
 }
+
 .blog-elements__left img {
-  
-   position: absolute;
-   width: auto;
-   // height: 50%;
-   height: 350px;
-  //  left: 0;
-  //  right: 0;
-  //  opacity: 0;
-   animation-name: fades;
-   animation-duration: 9s;
-   animation-iteration-count: infinite;
-   border-radius: 5px;
-   top:30%;
-   left: 3%;
+
+  position: absolute;
+  width: auto;
+  height: 350px;
+  animation-name: fades;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  top: 30%;
+  left: 3%;
 }
 
 
@@ -101,8 +97,6 @@ margin-top: 70px;
   }
 }
 
-
-
 .blog-elements__left img:nth-child(1) {
   animation-delay: 0s;
 }
@@ -115,12 +109,9 @@ margin-top: 70px;
   animation-delay: 6s;
 }
 
-
 .blog-elements__right {
   width: 30%;
   margin-left: 10%;
-  
- 
 }
 
 .blog-text__header {
@@ -129,8 +120,9 @@ margin-top: 70px;
   padding-top: 10px;
   text-align: center;
 }
+
 .blog-text__text {
-   color: #707070;
-   @include ubuntuMedium;
-   text-align: center;
+  color: #707070;
+  @include ubuntuMedium;
+  text-align: center;
 }

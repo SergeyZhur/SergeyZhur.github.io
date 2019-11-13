@@ -1,4 +1,4 @@
-.header { background-image: url("/image/header-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; max-width: 1600px; padding-top: 50px; position: relative; transition: 1s; }
+.header { background-image: url("../image/header-bg.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center; max-width: 1600px; padding-top: 50px; position: relative; transition: 1s; }
 
 .header-background-girl { background-image: url("../image/girl-header.jpg"); transition: 1s; }
 
@@ -151,13 +151,13 @@
 
 .we-thought-wrapper__dot--right { margin-top: 125px; margin-left: auto; margin-right: auto; }
 
-.we-thought--slide-one { background-image: url("/image/white-1.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+.we-thought--slide-one { background-image: url("../image/white-1.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
 
-.we-thought--slide-two { background-image: url("/image/white-2.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+.we-thought--slide-two { background-image: url("../image/white-2.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
 
-.we-thought--slide-three { background-image: url("/image/white-3.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+.we-thought--slide-three { background-image: url("../image/white-3.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
 
-.we-thought--slide-four { background-image: url("/image/white-4.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
+.we-thought--slide-four { background-image: url("../image/white-4.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat; }
 
 .we-thought-wrapper__circle { border-radius: 50%; background: #82f4d3; width: 20px; height: 20px; }
 
