@@ -534,3 +534,12 @@ background-color: #898989;
   display: none;
 }
 }
+@media (max-width: 350px) {
+ .list__image {
+   max-width: 150%;
+ }
+
+ .list__link {
+   margin-left: -25%;
+ }
+}
