@@ -497,9 +497,25 @@ background-color: #898989;
   .container {
     display: block;
   }
+  .profile-photo {
+    height: 415px;
+    margin-bottom: -20px;
+    margin-top: 0;
+  }
   .skill-list__wrapper {
     flex-wrap: wrap;
   }
+  .name {
+    font-size: 18px;
+  }
+   .heading_dark {
+     font-size: 17px;
+   }
+   .profile-text,
+   .list-item_text,
+   .skills-list_item {
+     font-size: 15px;
+   }
   .profile-text,
   .heading-light,
    .heading_dark,
@@ -527,7 +543,16 @@ background-color: #898989;
    .list__link {
      margin-left: -10%;
    }
+   .resume {
+     padding: 25px 0px;
+   }
+   .resume-wrap {
+     border: 1px solid rgba(168, 168, 168, 0.44)
+   }
 }
+
+
+
 
 @media (max-width: 500px) {
 .logo {
@@ -536,28 +561,55 @@ background-color: #898989;
 }
 @media (max-width: 350px) {
  .list__image {
-   max-width: 150%;
+   max-width: 145%;
  }
 
  .list__link {
-   margin-left: -25%;
+   margin-left: -22.5%;
  }
+ .profile-text {
+   font-size: 14px;
+ }
+}
+@media (max-width: 320px) {
+.profile-photo {
+  margin-bottom: -40px;
+}
+
+  .list-item_text,
+  .skills-list_item {
+    font-size: 14px;
+  }
+    .profile-text {
+      font-size: 13px;
+    }
 }
 @media (max-width: 300px) {
   .list__image {
-    max-width: 180%;
+    max-width: 160%;
   }
 
   .list__link {
-    margin-left: -40%;
+    margin-left: -30%;
   }
+    .name {
+      font-size: 16px;
+      /* text-align: center; */
+      width: 170px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 }
-@media (max-width: 370px) {
+@media (max-width: 270px) {
   .list__image {
-    max-width: 210%;
+    max-width: 170%;
   }
 
   .list__link {
-    margin-left: -55%;
+    margin-left: -35%;
   }
+  .profile-text {
+    font-size: 12px;
+  }
+
 }
