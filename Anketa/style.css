@@ -521,6 +521,12 @@ background-color: #898989;
      margin-left: 13px;
      margin-right: 13px;
    }
+   .list__image {
+     max-width: 120%;
+   }
+   .list__link {
+     margin-left: -10%;
+   }
 }
 
 @media (max-width: 500px) {
