@@ -492,3 +492,39 @@ background-color: #898989;
 {
   width: 90%;
 }
+
+@media (max-width: 576px) {
+  .container {
+    display: block;
+  }
+  .skill-list__wrapper {
+    flex-wrap: wrap;
+  }
+  .profile-text,
+  .heading-light,
+   .heading_dark,
+   .list-item_text {
+    text-align: center;
+  }
+    .social-networks {
+      padding-top: 10px;
+    }
+    .social-networks__link {
+      margin-right: auto;
+      margin-left: auto;
+    }
+   .list-item,
+   .list-item__gallery {
+     padding-left: 0;
+   }
+   .skills-list {
+     margin-left: 13px;
+     margin-right: 13px;
+   }
+}
+
+@media (max-width: 500px) {
+.logo {
+  display: none;
+}
+}
