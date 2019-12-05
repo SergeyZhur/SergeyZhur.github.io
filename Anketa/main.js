@@ -51,7 +51,16 @@ $(document).ready(function () {
     );
     return false;
   });
-  
+  $(".certificate__link-6").click(function () {
+    $("#certificate-hidden__item-6").slideToggle(
+      // "slow"
+      {
+        duration: 1000, // продолжительность анимации
+        easing: "linear", // скорость анимации
+      }
+    );
+    return false;
+  });
 });
 
 

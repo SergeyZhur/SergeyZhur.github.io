@@ -518,6 +518,20 @@ font-family: 'Montserrat',sans-serif;
   display: none;
     margin-top: 30px;
 }
+
+
+/* Увелечение сертификатов при наведение  */
+.certificate__image {
+  transition: 1s;
+
+}
+
+.certificate__image:hover {
+  transform: scale(1.6);
+
+}
+
+
 @media (max-width: 576px) {
   .container {
     display: block;
@@ -568,23 +582,21 @@ font-family: 'Montserrat',sans-serif;
    .list__link {
      margin-left: -10%;
    }
-   .resume {
+   .resume {  
      padding: 25px 0px;
    }
    .resume-wrap {
      border: 1px solid rgba(168, 168, 168, 0.44)
    }
- 
-}
+ .certificate__image {
+   transition: none;
 
-.certificate__image {
- transition: 1s;
- /* Время эффекта */
-}
-.certificate__image:hover {
- transform: scale(2.2);
- /* Увеличиваем масштаб */
+ }
 
+ .certificate__image:hover {
+   transform: none;
+
+ }
 }
 
 @media (max-width: 500px) {
