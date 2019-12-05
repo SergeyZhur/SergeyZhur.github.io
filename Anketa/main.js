@@ -20,12 +20,52 @@ $(document).ready(function () {
     );
     return false;
   });
+
+  $(".certificate__link-3").click(function () {
+    $("#certificate-hidden__item-3").slideToggle(
+      // "slow"
+      {
+        duration: 1000, // продолжительность анимации
+        easing: "linear", // скорость анимации
+      }
+    );
+    return false;
+  });
+  $(".certificate__link-4").click(function () {
+    $("#certificate-hidden__item-4").slideToggle(
+      // "slow"
+      {
+        duration: 1000, // продолжительность анимации
+        easing: "linear", // скорость анимации
+      }
+    );
+    return false;
+  });
+  $(".certificate__link-5").click(function () {
+    $("#certificate-hidden__item-5").slideToggle(
+      // "slow"
+      {
+        duration: 1000, // продолжительность анимации
+        easing: "linear", // скорость анимации
+      }
+    );
+    return false;
+  });
+  
 });
 
-/* <a class="hider">Ссылка</a>
 
 
-  <div id="hidden" style="display: none;">
-    <img src="https://kartinki-dlya-srisovki.ru/wp-content/uploads/2018/11/legkie-risunki-po-kletochkam-3.jpg" alt="">
-</div>
-    <div> gogogogogo</div> */
+// Для увилечения картином, в данный момент отключено см приложение в txt формате
+// var image = document.querySelector('.certificate__image');
+// var bigsize = "400"; //Размер большой картинки
+// var smallsize = "120"; //Размер маленькой картинки
+
+// image.onclick = function ({ target }) {
+//   if (target.height == bigsize) {
+//     target.height = smallsize;
+//     image.classList.add('p');
+//   }
+//   else target.height = bigsize;
+// };
+

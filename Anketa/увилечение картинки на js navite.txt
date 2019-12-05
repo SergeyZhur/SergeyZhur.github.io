@@ -1,0 +1,46 @@
+<table align="center">
+  <tr>
+    <td align="center">
+      <img class="certificate__image" src="https://www.sunhome.ru/i/wallpapers/123/tigr-v15.1920x1200.jpg" height="150" />
+      
+    </td>
+    
+  </tr>
+</table>
+
+
+
+var image = document.querySelector('.certificate__image');
+var bigsize = "300"; //Размер большой картинки
+var smallsize = "150"; //Размер маленькой картинки
+
+image.onclick = function({target}) {
+if (target.height == bigsize) target.height = smallsize;
+else target.height = bigsize;
+}
+
+
+Убрать border-box для картинки обязательно иначе работать не будет
+
+
+
+
+а кстати вопрос такой, как сделать чтобы при 576 пк отменить часть кода джс
+ 
+ну чтобы не работал
+ 
+в цсс медиа запросы а в джс как
+
+проверять размер экрана
+
+ 
+понял
+
+ 
+window.innerWidth
+
+
+
+доработать увелечение картинки, например когда выезжает при клике картинка, добавляешь класс с позишен абсалют и она выезжает в центр экрана
+на компьютерах,а так же кликаешь она уменьшается или типо того, а при планшете или телефоне убирать данное свойство при определенном разрешение экрана
+пример   if (target.height == bigsize) target.height = smallsize, target.height.classList.add('p') ;

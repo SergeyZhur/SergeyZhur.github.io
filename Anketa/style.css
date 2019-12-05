@@ -31,7 +31,7 @@ html
   background-size: 62%;
   background-position: 50% 26%;
   
-  height: 250px;
+  height: 300px;
   background-image: url(./4YThA6la-YM.jpg);
  
   background-repeat: no-repeat;
@@ -472,7 +472,7 @@ font-family: 'Montserrat',sans-serif;
 
 .certificate__image {
   max-width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: ridge 10px #5a5a5a;
  
 }
@@ -574,10 +574,18 @@ font-family: 'Montserrat',sans-serif;
    .resume-wrap {
      border: 1px solid rgba(168, 168, 168, 0.44)
    }
+ 
 }
 
+.certificate__image {
+ transition: 1s;
+ /* Время эффекта */
+}
+.certificate__image:hover {
+ transform: scale(2.2);
+ /* Увеличиваем масштаб */
 
-
+}
 
 @media (max-width: 500px) {
 .logo {
