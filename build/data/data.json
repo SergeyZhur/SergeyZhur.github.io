@@ -1,0 +1,19 @@
+{
+  "positions": [
+    {
+      "article": "31007743",
+      "fullName": "Стиральная машина с вертикальной загрузкой Smart Candy CST G270L/1-07",
+      "price": "22 990",
+      "oldPrice": "28 990",
+      "count": "2",
+      "photo": "/img/SmartCandy.jpg"
+    },
+    {
+      "article": "31007818",
+      "fullName": "Стиральная машина под раковину Candy Aquamatic Tempo AQUA 135D2-07",
+      "price": "19 490",
+      "count": "1",
+      "photo": "/img/CandyAquamatic.jpg"
+    }
+  ]
+}
