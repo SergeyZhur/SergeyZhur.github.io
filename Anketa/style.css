@@ -445,12 +445,12 @@ width: 300px;
   margin-left: 10px;
   border: solid 1px rgb(35, 3, 124);
   box-shadow: 0 0 5px rgb(59, 2, 218);
-  padding: 5px;
+  padding: 15px;
 }
 .skill-list__wrapper {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  /* align-items: center; */
+  
 }
 .skills-list_item
 {
@@ -462,6 +462,19 @@ font-family: 'Montserrat',sans-serif;
   color: #000000;
   
 }
+ .image-icon {
+   width: 15%;
+    margin:10px;
+ }
+ .image-icon__github {
+   width: 10%;
+  
+ }
+ .image-icons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
 .level
 {
   /* width: 70%;
@@ -476,8 +489,91 @@ font-family: 'Montserrat',sans-serif;
   border: ridge 10px #5a5a5a;
  
 }
+
+.logo-img__link {
+  text-decoration: none;
+  color: none;
+}
+
+/* Календарь */
+
+ .calendar2-table {
+   padding-bottom: 20px;
+ }
+#calendar2 {
+  width: 100%;
+  font: monospace;
+  line-height: 2.2em;
+  font-size: 15px;
+  text-align: center;
+      background: #ababab;
+}
+
+.calendar-title{
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+#calendar2 thead tr:last-child {
+  font-size: small;
+  color: rgb(85, 85, 85);
+}
+
+#calendar2 thead tr:nth-child(1) td:nth-child(2) {
+  color: rgb(50, 50, 50);
+  font-weight: bold;
+}
+
+#calendar2 thead tr:nth-child(1) td:nth-child(1),
+#calendar2 thead tr:nth-child(1) td:nth-child(3) {
+color: #000000;
+font-size: 30px;
+}
+#calendar2 thead tr:nth-child(1) td:nth-child(1):hover,
+#calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+  cursor: pointer;
+  font-size: 40px;
+  color: #ffffff;
+  
+ 
+
+}
+
+#calendar2 tbody td {
+  color: rgb(44, 86, 122);
+}
+
+#calendar2 tbody td:nth-child(n+6),
+#calendar2 .holiday {
+  color:rebeccapurple;
+  font-weight: bold;
+}
+
+#calendar2 tbody td.today {
+  background: rebeccapurple;
+  color: #fff;
+  font-weight: 500;
+}
+
+#calendar2 td {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  color: #000000;
+}
+
+#calendar2 tbody td {
+  color: #ffffff;
+}
+
+
+
+/*  */
+
 .certificate__header{
- text-align: center;
+     text-align: center;
+     font-size: 25px;
+     color: #684da3;
+     font-weight: bold;
 }
 .certificate__link {
   border-radius: 5px;
@@ -491,6 +587,21 @@ font-family: 'Montserrat',sans-serif;
       color: #fff;
       margin-bottom: 13px;
       font-size: 16px;
+}
+.certificate__link-2 {
+  padding: 10px 50px;
+}
+.certificate__link-3 {
+  padding: 10px 56px;
+}
+.certificate__link-4 {
+padding: 10px 66px;
+}
+.certificate__link-5 {
+padding: 10px 61px;
+}
+.certificate__link-6 {
+      padding: 10px 88px;
 }
 .certificate__link:hover {
   transition: 0.7s;
@@ -522,13 +633,13 @@ font-family: 'Montserrat',sans-serif;
 
 /* Увелечение сертификатов при наведение  */
 .certificate__image {
-  transition: 1s;
+  transition: 2s;
 
 }
 
 .certificate__image:hover {
   transform: scale(1.6);
-
+  transition: 2s;
 }
 
 
@@ -555,6 +666,7 @@ font-family: 'Montserrat',sans-serif;
    .skills-list_item {
      font-size: 15px;
    }
+  
   .profile-text,
   .heading-light,
    .heading_dark,
@@ -658,3 +770,20 @@ font-family: 'Montserrat',sans-serif;
   }
 
 }
+
+
+/* second str serificate */
+.certificate-name {
+  text-align: center;
+  font-size: 25px;
+}
+.certificate-name__element {
+  text-transform: none;
+}
+.certificate-name__image {
+  width: 70%;
+  height: auto;
+}
+
+
+
