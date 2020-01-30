@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Skillbox</title>
+</head>
+<body>
+  
+<h1 class="title">Стоимость обучения</h1>
+  <div class="main">
+    <div class="main__left">
+      <ul class="price-list">
+        <li class="price-list__item">  <img src="img/Label.png" alt="img" class="price-list__image"> </li>
+        <li class="price-list__item">
+          <p class="price-list__full-price">Полная стоимость курса</p>
+          <p class="price-list__money"><s>50 000 ₽</s></p>
+        </li>
+        <li class="price-list__item">
+          <p class="price-list__money-credit">2 900 ₽</p>
+          <p class="price-list__credit">Рассрочка без первого взноса</p>
+        </li>
+        <li>
+  <p class="price-list__new-price">29 000 ₽</p>
+                <p class="price-list__sale-first">Для первых 20-ти</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main__right">
+     <div class="right-block-wrapper">
+        <h3 class="record">Запишитесь на курс</h3>
+        <div class="date">
+          <p class="date__start  date-hidden-one">Старт курса: <span class="date__element">7 сентября</span></p>
+          <p class="date__work  date-hidden-one">Осталось: <span class="date__element">19 мест</span></p>
+            <p class="date__start  date-hidden-two">Старт курса: <span class="date__element">15 июня</span></p>
+            <p class="date__work date-hidden-two">Осталось: <span class="date__element ">15 мест</span></p>
+        </div>
+        <form action="" class="post-form">
+          <input type="text" name="name" id="name" placeholder="Имя" required>
+           <input type="tel" name="tel" id="tel" placeholder="Телефон моб" required
+             pattern="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]">
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="submit" value="Записаться" id="submit" class="btn-active">
+    
+            <input type="checkbox" name="terms" id="checkbox" required >
+            <label for="checkbox">
+              <span class="checkbox-text">Я согласен с условиями обработки <br class="br-hidden">
+               <a target="_blank" href="#" title="Персональных данных" class="checkbox-link">персональных данных</a></span>
+         
+               
+            </label>
+            <input type="submit" value="Записаться" id="submit" class="btn-hidden">
+         
+        </form>
+     </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
