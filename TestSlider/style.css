@@ -24,7 +24,9 @@
   width: 50%;
   height: 300px;
 }
-
+.dot-1 {
+  border: solid blue 2px;
+}
 .dots {
   display: flex;
   justify-content: center;
