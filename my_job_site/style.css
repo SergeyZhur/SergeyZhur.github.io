@@ -170,6 +170,11 @@ text-decoration: underline;
 .image {
   display: flex;
   justify-content: center;
+   flex-wrap: wrap;
+     background-image: url(bg_3.jpg);
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
 }
 .image img {
   border: solid black 3px;
@@ -187,8 +192,13 @@ text-decoration: underline;
  .main-wrapper__block-three {
    width:100%;
  }
+
+ .image img {
+   height: auto;
+   width:100%;
+ }
  .main-wrapper {
-   margin-bottom: 560px;
+   height:auto;
  }
  .intresting-item-1,
  .intresting-item-2,
