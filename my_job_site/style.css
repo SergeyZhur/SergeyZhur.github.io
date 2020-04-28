@@ -186,7 +186,10 @@ text-decoration: underline;
   width:100px;
 }
 
-
+.every {
+  font-size: 22px;
+  color:yellow;
+}
 @media (max-width: 1000px) {
  .main-wrapper__block-one,
  .main-wrapper__block-two,
