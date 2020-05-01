@@ -140,42 +140,54 @@ window.renderStatistics = function (ctx, names, times) {
   
 
 
-  function resultHeightHistogram(maxWidthPx, maxNumber, num) {
+  function resultHeightHistogram(maxWidthPx, maxNumber, num, plusMinus) {
 var numRound = Math.round(num);
   var maxNumberRound = Math.round(maxNumber);
   var result = (maxWidthPx * numRound) / maxNumberRound;
-    Math.round(result);
-   var endResult = Number("-" + result);
 
-    return endResult;
+    return Math.round(Number(plusMinus + result));
 }
   // console.log(resultHeightHistogram(150, times[3], times[0]))
 // определение высоты гистограммы
 
-
+  // console.log(resultHeightHistogram(150, times[3], times[0]))
 // построение высоты каждой гистограммы
 if(times[0]){
-  //  ctx.fillText(names[0], 170, 200);
+   ctx.fillText(names[0], 150, 270);
   
-  ctx.fillRect(150, 0, HISTOGRAM_WIDTH, resultHeightHistogram(150, times[3], times[0]) );
+  ctx.fillRect(150, 250, HISTOGRAM_WIDTH, resultHeightHistogram(150, times[3], times[0], "-") );
   ctx.fillStyle = "#FF0000";
-  // ctx.fillText(Math.round(times[0]), 170, 200);
+  ctx.fillText(Math.round(times[0]), 150, (270 - 30) - resultHeightHistogram(150, times[3], times[0], "+") );
 }
-// if(times[1]){
-//   ctx.fillStyle = "#FF0000";
-//   ctx.fillRect(250, 100, HISTOGRAM_WIDTH, HISTOGRAM_HEIGHT);
-// }
+if(times[1]){
+  ctx.fillText(names[1], 220, 270);
+  ctx.fillRect(220, 250, HISTOGRAM_WIDTH, resultHeightHistogram(150, times[3], times[1], "-"));
+  ctx.fillStyle = "#FF0000";
+  ctx.fillText(Math.round(times[1]), 220, (270 - 30) - resultHeightHistogram(150, times[3], times[1], "+"));
+}
 
 if(times[2]){
-
+  ctx.fillText(names[2], 290, 270);
+  ctx.fillRect(290, 250, HISTOGRAM_WIDTH, resultHeightHistogram(150, times[3], times[2], "-"));
+  ctx.fillStyle = "#FF0000";
+  ctx.fillText(Math.round(times[2]), 290, (270 - 30) - resultHeightHistogram(150, times[3], times[2], "+"));
 }
 if(times[3]){
-
+  ctx.fillText(names[3], 360, 270);
+  ctx.fillRect(360, 250, HISTOGRAM_WIDTH, resultHeightHistogram(150, times[3], times[3], "-"));
+  ctx.fillStyle = "#FF0000";
+  ctx.fillText(Math.round(times[3]), 360, (270 - 30) - resultHeightHistogram(150, times[3], times[3], "+"));
 }
 
 
 
+for(var i = 0; i < 4; i++) {
+if(times[i]) {
+  
+}
 
+
+}
 
 
 
