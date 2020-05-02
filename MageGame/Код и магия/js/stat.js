@@ -30,52 +30,44 @@ window.renderStatistics = function (ctx, names, times) {
   function getMaxOfArray(numArray) {
     return Math.max.apply(null, numArray);
   }
-// узнаем максимальное число в массиве
   var maxNum = getMaxOfArray(times);
-  console.log(times)
-  console.log(maxNum)
-
-
-
-
-  var indexMaxNum = times.indexOf(getMaxOfArray(times));
-// находим индекс максимального числа в массиве
-
-
-
-
+// узнаем максимальное число в массиве
 
 function formulaHeight(arrNum) {
-  var result = (HISTOGRAM_HEIGHT * arrNum) / maxNum;
-return result
+  return (HISTOGRAM_HEIGHT * arrNum) / maxNum;
 }
 // Формула вычисления высоты в px для каждого числа 
-
-
-  // console.log(formulaHeight(times[1]))
-
 
 
 
 
 function arrayHeightPx(){
 var arrHeightEmpty = [];
-var endNum = times[3];
-  for (var i = 0; i < 3; i++) {
+
+  for (var i = 0; i < times.length; i++) {
     arrHeightEmpty.push(Math.round(formulaHeight(times[i]))) 
   }
-  arrHeightEmpty.push(endNum);
+
   return arrHeightEmpty;
 }
+
 // Массив отсортированный от меньшего к большему, с конкретной высотой для каждого столбца (округленные числа)
-  // console.log(arrayHeightPx())
+  console.log(arrayHeightPx())
+  console.log(times)
 
 
-// for(var i = 0; i < times.length; i++) {
+  // var HISTOGRAM_HEIGHT = 150;
+  // var HISTOGRAM_WIDTH = 40;
+  // var MAIN_HEIGHT_GAP = 270;
+  // var GAP_PLUS = 50;
 
-//   ctx.fillRect(HISTOGRAM_HEIGHT, MAIN_HEIGHT_GAP - arrayHeightPx()[i], HISTOGRAM_WIDTH, arrayHeightPx()[i ]);
-//   // HISTOGRAM_HEIGHT += GAP_PLUS;
-// }
+
+for(var i = 0; i < times.length; i++) {
+
+  ctx.fillRect(HISTOGRAM_HEIGHT, (MAIN_HEIGHT_GAP - arrayHeightPx()[i]), HISTOGRAM_WIDTH, arrayHeightPx()[i]);
+
+  HISTOGRAM_HEIGHT += 50+40;
+}
 
 
 //   function resultHeightHistogram(maxWidthPx, maxNumber, num, plusMinus) {
