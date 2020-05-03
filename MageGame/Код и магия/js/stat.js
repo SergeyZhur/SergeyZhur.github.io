@@ -1,4 +1,5 @@
 "use strict";
+
 var MAIN_WIDTH = 420;
 var MAIN_HEIGHT = 270;
 var COORDINATES_X = 100;
@@ -8,8 +9,8 @@ var HISTOGRAM_HEIGHT = 150;
 var HISTOGRAM_WIDTH = 40;
 var MAIN_HEIGHT_GAP = 250;
 var GAP_PLUS = 50;
-var width_X_histogram = 150;
-var marginBottom = 10;
+var WIDTH_X_HISTOGRAM = 150;
+var MARGIN_BOTTOM = 10;
 
 window.renderStatistics = function (ctx, names, times) {
 
@@ -29,14 +30,12 @@ window.renderStatistics = function (ctx, names, times) {
   function getMaxOfArray(numArray) {
     return Math.max.apply(null, numArray);
   }
-  var maxNum = getMaxOfArray(times);
   // узнаем максимальное число в массиве
-
   function formulaHeight(arrNum) {
+    var maxNum = getMaxOfArray(times);
     return (HISTOGRAM_HEIGHT * arrNum) / maxNum;
   }
   // Формула вычисления высоты в px для каждого числа 
-
   function arrayHeightPx() {
     var arrHeightEmpty = [];
     for (var i = 0; i < times.length; i++) {
@@ -44,13 +43,11 @@ window.renderStatistics = function (ctx, names, times) {
     }
     return arrHeightEmpty;
   }
-
   function randomInteger(min, max) {
     var rand = min - 0.5 + Math.random() * (max - min + 1);
     return Math.round(rand);
   }
   // функция на случайное число от 1 до 100
-
   function colorHistogram(saturation) {
  //  тон, насыщенность и светлота HSL
     var colorHistogramBlue = "hsl(240, saturation, 50%)";
@@ -59,19 +56,24 @@ window.renderStatistics = function (ctx, names, times) {
 // функция для подстановки числа насыщенности и возвращает строку
 
   function histogram() {
+    var arrayHeight = arrayHeightPx();
+    var widthXhistogram = WIDTH_X_HISTOGRAM;
     for (var i = 0; i < times.length; i++) {
+      
       ctx.fillStyle = "#000000";
-      ctx.fillText(names[i], width_X_histogram, MAIN_HEIGHT);
+      ctx.fillText(names[i], widthXhistogram, MAIN_HEIGHT);
+
       if (names[i] === "Вы") {
         ctx.fillStyle = "rgba(255, 0, 0, 1)";
       }
       if (names[i] !== "Вы") {
         ctx.fillStyle = colorHistogram(randomInteger(1, 100));
       }
-      ctx.fillRect(width_X_histogram, MAIN_HEIGHT_GAP - arrayHeightPx()[i], HISTOGRAM_WIDTH, arrayHeightPx()[i]);
-      ctx.fillStyle = "  #000000";
-      ctx.fillText(Math.round(times[i]), width_X_histogram, MAIN_HEIGHT_GAP - arrayHeightPx()[i] - marginBottom);
-      width_X_histogram += GAP_PLUS + HISTOGRAM_WIDTH;
+
+      ctx.fillRect(widthXhistogram, MAIN_HEIGHT_GAP - arrayHeight[i], HISTOGRAM_WIDTH, arrayHeight[i]);
+      ctx.fillStyle = "#000000";
+      ctx.fillText(Math.round(times[i]), widthXhistogram, MAIN_HEIGHT_GAP - arrayHeight[i] - MARGIN_BOTTOM);
+      widthXhistogram += GAP_PLUS + HISTOGRAM_WIDTH;
     }
   }
   histogram();
