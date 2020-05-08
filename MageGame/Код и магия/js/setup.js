@@ -92,3 +92,154 @@ show(document.querySelector('.setup-similar'));
 show(document.querySelector('.setup'));
 createObjectWizard();
 insertFragment();
+// _______________УРОК 4 _________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+function serchClass(nameClass) {
+  return document.querySelector(nameClass);
+};
+
+function removeHiddenHandler() {
+  serchClass('.setup').classList.remove('hidden');
+};
+
+function addHiddenHandler() {
+  serchClass('.setup').classList.add('hidden');
+};
+
+serchClass('.setup-close').addEventListener('click', addHiddenHandler);
+serchClass('.setup-open').addEventListener('click', removeHiddenHandler);
+
+
+
+
+
+
+
+serchClass('.setup-close').addEventListener('keydown', function (evt) {
+  var buttonEsc = 27;
+
+  if (evt.keyCode === buttonEsc) {
+
+    addHiddenHandler();
+    evt.stopPropagation();
+  };
+});
+
+serchClass('.setup-open').addEventListener('keydown', function (evt) {
+  var buttonEnter = 13;
+
+  if (evt.keyCode === buttonEnter) {
+    removeHiddenHandler();
+    // evt.stopPropagation();
+  };
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function serchClass(pointClass) {
+//   return document.querySelector(pointClass);
+// };
+
+// (function thingPopup() {
+//   function removeHiddenHandler() {
+//     return serchClass('.setup').classList.remove('hidden');
+//   };
+
+//   function addHiddenHandler() {
+//     return serchClass('.setup').classList.add('hidden');
+//   };
+
+//   serchClass('.setup-open').addEventListener('click', removeHiddenHandler);
+//   serchClass('.setup-close').addEventListener('click', addHiddenHandler);
+// })();
+
+// ______________________________________________________________
+
+(function changeCharacter() {
+  var counter = 0;
+
+  function changeColorCoat() {
+
+    var colorCoat = [
+      'rgb(101, 137, 164)',
+      'rgb(241, 43, 107)',
+      'rgb(146, 100, 161)',
+      'rgb(56, 159, 117)',
+      'rgb(215, 210, 55)',
+      'rgb(0, 0, 0)'
+    ];
+
+    serchClass('.setup-wizard .wizard-coat').style.fill = colorCoat[counter];
+    serchClass('.input-coat-color').value = colorCoat[counter];
+
+    if (counter++ >= colorCoat.length - 1) {
+      counter = 0;
+    };
+  };
+
+  function changeWizardEyes() {
+
+    var wizardEyes = [
+      'rgb(0, 0, 0)',
+      'rgb(255, 0, 0)',
+      'rgb(0, 0, 255)',
+      'rgb(255, 255, 0)',
+      'rgb(0, 128, 0)'
+    ];
+
+    serchClass('.setup-wizard .wizard-eyes').style.fill = wizardEyes[counter];
+    serchClass('.input-eyes-color').value = wizardEyes[counter];
+
+    if (counter++ >= wizardEyes.length - 1) {
+      counter = 0;
+    };
+  }
+
+  function changeFireball() {
+
+    var fireballs = [
+      '#ee4830',
+      '#30a8ee',
+      '#5ce6c0',
+      '#e848d5',
+      '#e6e848'
+    ];
+
+    serchClass('.setup-fireball-wrap').style.background = fireballs[counter];
+    serchClass('.input-fireball-color').value = fireballs[counter];
+    // console.log(document.querySelector('.input-coat-color').value = fireballs[counter]);
+    // Добавляет значение цвета в скрытый инпут
+    if (counter++ >= fireballs.length - 1) {
+      counter = 0;
+    };
+  };
+
+  serchClass('.setup-wizard .wizard-coat').addEventListener('click', changeColorCoat);
+  serchClass('.setup-wizard .wizard-eyes').addEventListener('click', changeWizardEyes);
+  serchClass('.setup-fireball-wrap').addEventListener('click', changeFireball);
+// CДЕЛАТЬ ОДНУ ФУНКЦИЮ ДЛЯ ШАБЛОНА , но в последней не fill a background
+// function ww(arr, namefunc){
+//   function namefunc()
+// }
+})();
