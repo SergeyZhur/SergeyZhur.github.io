@@ -94,17 +94,15 @@ createObjectWizard();
 insertFragment();
 // _______________УРОК 4 _________________________________________________________
 
+function popupHiddenAlways() {
+  getElement('.overlay').classList.add('hidden');
+}
+popupHiddenAlways();
+
 
 function getElement(nameClass) {
   return document.querySelector(nameClass);
 };
-
-
-
-
-
-
-
 
 function removeHiddenHandler() {
   getElement('.setup').classList.remove('hidden');
@@ -114,59 +112,50 @@ function addHiddenHandler() {
   getElement('.setup').classList.add('hidden');
 };
 
-// getElement('.setup-close').addEventListener('click', addHiddenHandler);
-// getElement('.setup-open').addEventListener('click', removeHiddenHandler);
-// Рабочий варинат
 
+function buttonEsc(evt) {
+  var numberButtonEsc = 27;
 
-getElement('.setup-open').addEventListener('click', function(){
-  removeHiddenHandler();
-
-  document.addEventListener('keydown',function(evt){
-
-  if (evt.keyCode === 27) {
-console.log(55)
+  if (evt.keyCode === numberButtonEsc) {
     addHiddenHandler();
-   
-      };
-       evt.stopPropagation();
-     
-  })
-});
-// getElement('.setup-close').addEventListener('click', function(){
-//   addHiddenHandler();
+  };
 
-// });
+};
 
+function addHeandlerKeyEsc() {
+  document.addEventListener('keydown', buttonEsc);
+};
 
-// function closePopup() {
-//   addHiddenHandler();
-//   document.removeEventListener('keydown', onPopupEscPress);
-// }
-// function onPopupEscPress(evt) {
-//   if (evt.keyCode === 27) {
-//     closePopup();
-//   };
-// }
+function deleteHeandlerInFocus(evt) {
+  if (evt.type === 'focus') {
+    document.removeEventListener('keydown', buttonEsc);
+  };
+};
 
-// getElement('.setup-close').addEventListener('keydown', function (evt) {
-//   var buttonEsc = 27;
+function openButtonEnter(evt) {
+  var numberButtonEnter = 13;
 
-//   if (evt.keyCode === buttonEsc) {
+  if (evt.keyCode === numberButtonEnter) {
+    removeHiddenHandler();
+  };
 
-//     addHiddenHandler();
-//     // evt.stopPropagation();
-//   };
-// });
+}
 
-// getElement('.setup-open').addEventListener('keydown', function (evt) {
-//   var buttonEnter = 13;
+function closeButtonEnter(evt) {
+  var numberButtonEnter = 13;
 
-//   if (evt.keyCode === buttonEnter) {
-//     removeHiddenHandler();
-//     // evt.stopPropagation();
-//   };
-// });
+  if (evt.keyCode === numberButtonEnter) {
+    addHiddenHandler();
+  }
+}
+// _____________________________________________________________
+getElement('.setup-close').addEventListener('click', addHiddenHandler);
+getElement('.setup-open').addEventListener('click', removeHiddenHandler);
+getElement('.setup-user-name').addEventListener('blur', addHeandlerKeyEsc);
+getElement('.setup-user-name').addEventListener('focus', deleteHeandlerInFocus);
+addHeandlerKeyEsc();
+getElement('.setup-open-icon').addEventListener('keydown', openButtonEnter);
+getElement('.setup-close').addEventListener('keydown', closeButtonEnter);
 
 
 
@@ -174,29 +163,6 @@ console.log(55)
 
 
 
-
-
-
-
-
-
-
-// function getElement(pointClass) {
-//   return document.querySelector(pointClass);
-// };
-
-// (function thingPopup() {
-//   function removeHiddenHandler() {
-//     return getElement('.setup').classList.remove('hidden');
-//   };
-
-//   function addHiddenHandler() {
-//     return getElement('.setup').classList.add('hidden');
-//   };
-
-//   getElement('.setup-open').addEventListener('click', removeHiddenHandler);
-//   getElement('.setup-close').addEventListener('click', addHiddenHandler);
-// })();
 
 // ______________________________________________________________
 
@@ -262,9 +228,9 @@ console.log(55)
   getElement('.setup-wizard .wizard-coat').addEventListener('click', changeColorCoat);
   getElement('.setup-wizard .wizard-eyes').addEventListener('click', changeWizardEyes);
   getElement('.setup-fireball-wrap').addEventListener('click', changeFireball);
-// CДЕЛАТЬ ОДНУ ФУНКЦИЮ ДЛЯ ШАБЛОНА , но в последней не fill a background
-// function ww(arr, namefunc){
-//   function namefunc()
-// }
+  // CДЕЛАТЬ ОДНУ ФУНКЦИЮ ДЛЯ ШАБЛОНА , но в последней не fill a background
+  // function ww(arr, namefunc){
+  //   function namefunc()
+  // }
 })();
 // ______________________УРОК 5 ____________________________________
