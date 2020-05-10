@@ -95,57 +95,78 @@ insertFragment();
 // _______________УРОК 4 _________________________________________________________
 
 
-
-
-
-
-
-
-
-
-
-
-function serchClass(nameClass) {
+function getElement(nameClass) {
   return document.querySelector(nameClass);
 };
 
+
+
+
+
+
+
+
 function removeHiddenHandler() {
-  serchClass('.setup').classList.remove('hidden');
+  getElement('.setup').classList.remove('hidden');
 };
 
 function addHiddenHandler() {
-  serchClass('.setup').classList.add('hidden');
+  getElement('.setup').classList.add('hidden');
 };
 
-serchClass('.setup-close').addEventListener('click', addHiddenHandler);
-serchClass('.setup-open').addEventListener('click', removeHiddenHandler);
+// getElement('.setup-close').addEventListener('click', addHiddenHandler);
+// getElement('.setup-open').addEventListener('click', removeHiddenHandler);
+// Рабочий варинат
 
 
+getElement('.setup-open').addEventListener('click', function(){
+  removeHiddenHandler();
 
+  document.addEventListener('keydown',function(evt){
 
-
-
-
-serchClass('.setup-close').addEventListener('keydown', function (evt) {
-  var buttonEsc = 27;
-
-  if (evt.keyCode === buttonEsc) {
-
+  if (evt.keyCode === 27) {
+console.log(55)
     addHiddenHandler();
-    evt.stopPropagation();
-  };
+   
+      };
+       evt.stopPropagation();
+     
+  })
 });
+// getElement('.setup-close').addEventListener('click', function(){
+//   addHiddenHandler();
 
-serchClass('.setup-open').addEventListener('keydown', function (evt) {
-  var buttonEnter = 13;
-
-  if (evt.keyCode === buttonEnter) {
-    removeHiddenHandler();
-    // evt.stopPropagation();
-  };
-});
+// });
 
 
+// function closePopup() {
+//   addHiddenHandler();
+//   document.removeEventListener('keydown', onPopupEscPress);
+// }
+// function onPopupEscPress(evt) {
+//   if (evt.keyCode === 27) {
+//     closePopup();
+//   };
+// }
+
+// getElement('.setup-close').addEventListener('keydown', function (evt) {
+//   var buttonEsc = 27;
+
+//   if (evt.keyCode === buttonEsc) {
+
+//     addHiddenHandler();
+//     // evt.stopPropagation();
+//   };
+// });
+
+// getElement('.setup-open').addEventListener('keydown', function (evt) {
+//   var buttonEnter = 13;
+
+//   if (evt.keyCode === buttonEnter) {
+//     removeHiddenHandler();
+//     // evt.stopPropagation();
+//   };
+// });
 
 
 
@@ -157,21 +178,24 @@ serchClass('.setup-open').addEventListener('keydown', function (evt) {
 
 
 
-// function serchClass(pointClass) {
+
+
+
+// function getElement(pointClass) {
 //   return document.querySelector(pointClass);
 // };
 
 // (function thingPopup() {
 //   function removeHiddenHandler() {
-//     return serchClass('.setup').classList.remove('hidden');
+//     return getElement('.setup').classList.remove('hidden');
 //   };
 
 //   function addHiddenHandler() {
-//     return serchClass('.setup').classList.add('hidden');
+//     return getElement('.setup').classList.add('hidden');
 //   };
 
-//   serchClass('.setup-open').addEventListener('click', removeHiddenHandler);
-//   serchClass('.setup-close').addEventListener('click', addHiddenHandler);
+//   getElement('.setup-open').addEventListener('click', removeHiddenHandler);
+//   getElement('.setup-close').addEventListener('click', addHiddenHandler);
 // })();
 
 // ______________________________________________________________
@@ -190,8 +214,8 @@ serchClass('.setup-open').addEventListener('keydown', function (evt) {
       'rgb(0, 0, 0)'
     ];
 
-    serchClass('.setup-wizard .wizard-coat').style.fill = colorCoat[counter];
-    serchClass('.input-coat-color').value = colorCoat[counter];
+    getElement('.setup-wizard .wizard-coat').style.fill = colorCoat[counter];
+    getElement('.input-coat-color').value = colorCoat[counter];
 
     if (counter++ >= colorCoat.length - 1) {
       counter = 0;
@@ -208,8 +232,8 @@ serchClass('.setup-open').addEventListener('keydown', function (evt) {
       'rgb(0, 128, 0)'
     ];
 
-    serchClass('.setup-wizard .wizard-eyes').style.fill = wizardEyes[counter];
-    serchClass('.input-eyes-color').value = wizardEyes[counter];
+    getElement('.setup-wizard .wizard-eyes').style.fill = wizardEyes[counter];
+    getElement('.input-eyes-color').value = wizardEyes[counter];
 
     if (counter++ >= wizardEyes.length - 1) {
       counter = 0;
@@ -226,8 +250,8 @@ serchClass('.setup-open').addEventListener('keydown', function (evt) {
       '#e6e848'
     ];
 
-    serchClass('.setup-fireball-wrap').style.background = fireballs[counter];
-    serchClass('.input-fireball-color').value = fireballs[counter];
+    getElement('.setup-fireball-wrap').style.background = fireballs[counter];
+    getElement('.input-fireball-color').value = fireballs[counter];
     // console.log(document.querySelector('.input-coat-color').value = fireballs[counter]);
     // Добавляет значение цвета в скрытый инпут
     if (counter++ >= fireballs.length - 1) {
@@ -235,11 +259,12 @@ serchClass('.setup-open').addEventListener('keydown', function (evt) {
     };
   };
 
-  serchClass('.setup-wizard .wizard-coat').addEventListener('click', changeColorCoat);
-  serchClass('.setup-wizard .wizard-eyes').addEventListener('click', changeWizardEyes);
-  serchClass('.setup-fireball-wrap').addEventListener('click', changeFireball);
+  getElement('.setup-wizard .wizard-coat').addEventListener('click', changeColorCoat);
+  getElement('.setup-wizard .wizard-eyes').addEventListener('click', changeWizardEyes);
+  getElement('.setup-fireball-wrap').addEventListener('click', changeFireball);
 // CДЕЛАТЬ ОДНУ ФУНКЦИЮ ДЛЯ ШАБЛОНА , но в последней не fill a background
 // function ww(arr, namefunc){
 //   function namefunc()
 // }
 })();
+// ______________________УРОК 5 ____________________________________
