@@ -24,7 +24,7 @@
 
     var dragged = false;
 
-    var onMouseMove = function (moveEvt) {
+    function onMouseMove(moveEvt) {
 
       moveEvt.preventDefault();
 
@@ -45,7 +45,7 @@
 
     };
 
-    var onMouseUp = function (upEvt) {
+    function onMouseUp(upEvt) {
 
       upEvt.preventDefault();
 
@@ -54,7 +54,7 @@
 
       if (dragged) {
 
-        var onClickPreventDefault = function (evt) {
+    function onClickPreventDefault (evt) {
           evt.preventDefault();
           dialogHandler.removeEventListener('click', onClickPreventDefault);
         };

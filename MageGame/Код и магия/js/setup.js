@@ -89,7 +89,7 @@ function randomParam(arrParam) {
 }
 // _______________________________________________________________
 show(document.querySelector('.setup-similar'));
-show(document.querySelector('.setup'));
+// show(document.querySelector('.setup'));
 createObjectWizard();
 insertFragment();
 // _______________УРОК 4 _________________________________________________________
