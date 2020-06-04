@@ -42,7 +42,7 @@ var gameOver = function () {
   ctx.fillText("Конец игры", width / 2, height / 2);
 };
 
-// Рисуем окружность (используя функцию из главы 14)
+// Рисуем окружность (используя функцию)
 var circle = function (x, y, radius, fillCircle) {
   ctx.beginPath();
   ctx.arc(x, y, radius, 0, Math.PI * 2, false);

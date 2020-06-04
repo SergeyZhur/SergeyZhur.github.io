@@ -1,0 +1,12 @@
+
+h3 {
+  color:red;
+  display: flex;
+  flex-direction: column;
+}
+
+@import '_n.scss';
+// p { 
+//   color: red;
+// }
+// называть файлы с _n чтобы соеденить через импорт и в 1 файл
