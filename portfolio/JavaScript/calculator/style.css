@@ -4,15 +4,18 @@
 
 .wrapper-calculator {
   border: solid red 1px;
-  width:500px;
+  width: 500px;
   margin: 0 auto;
   margin-top: 50px;
 }
 
 .text-result {
-  border: solid blue 1px;
-  height:50px;
-  margin-bottom: 30px;
+  /* background:blue; */
+  height: 40px;
+  /*   margin-bottom: 10px; */
+  margin-top: 20px;
+  overflow: hidden;
+  font-size: 30px;
 }
 
 .wrapper-btn {
@@ -24,8 +27,8 @@
 }
 
 .wrapper-btn__item {
-  width:165px;
-  height:50px;
+  width: 165px;
+  height: 50px;
   border: solid green 1px;
   padding-top: 15px;
 }
@@ -33,4 +36,32 @@
 .wrapper-btn__item-line {
   margin-top: 10px;
   /* border-top: 3px red solid; */
+}
+
+.wrapper-result {
+  border: solid red 5px;
+  display: flex;
+  background: #ded9d9;
+}
+
+.clean-input {
+  cursor: pointer;
+  text-align: center;
+  padding: 10px;
+  margin-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  width: 50px;
+  background: #bfbaba;
+
+}
+
+.clean-input:hover {
+  background: #7f7f7f;
+}
+
+.clean-input:active {
+  transition: 0.2s;
+  background: red;
 }

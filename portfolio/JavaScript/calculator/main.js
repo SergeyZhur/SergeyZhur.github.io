@@ -1,113 +1,63 @@
-const valueButton = document.querySelector('#wrapper-btn');
-let result = document.querySelector('.text-result');
-let s = document.querySelector('#s');
-let arr = [];
-const actions = ['+', '-', '/', '*'];
+const wrapperForEvents = document.querySelector('#wrapper-btn');
+const firstTextArea = document.querySelector('.text-result');
+let cleanTextArea = document.querySelector('.clean-input');
+let secondTextArea = document.querySelector('.text');
 
-let strNumbers = '';
-const getValueAtr = (event) => {
-  strNumbers = ''
-  const lastElement = arr[arr.length - 1];
-  const { textContent } = event.target;
+let EmptyStr = '';
 
-  if (actions.includes(textContent)) {
-    if (actions.includes(lastElement)) {
-      arr[arr.length - 1] = textContent;
-    } else {
-      if (arr.length || textContent === '-') {
-        arr.push(event.target.textContent);
-      }
-    }
-  } else {
-    arr.push(event.target.textContent);
-  }
-  
+let onTargetButton = (event) => {
+
+  let resultEval = '';
+  let target = event.target.textContent;
 
 
-for(let i = 0; i < arr.length; i++) {
 
-  strNumbers = strNumbers + arr[i];
-  // if (arr[i] === '=') {
-  //   arr[i] = '';
-  //   let v = eval(strNumbers)
-  //   console.log(v);
   // }
-}
-  
+  //   if(target === EmptyStr[0] && EmptyStr[0] === '-') {
+  //   return EmptyStr = ''
+  // } else {
+  //   console.log(2)
+  // }
 
+  if (target === '=') {
 
+    resultEval = eval(EmptyStr);
+    firstTextArea.textContent = '';
 
-  // console.log(strNumbers)
- 
- 
-  result.textContent = strNumbers;
+    firstTextArea.textContent = resultEval;
+    secondTextArea.textContent = resultEval;
+    EmptyStr = resultEval;
 
-
-  s.addEventListener('click', function () {
-    let p = eval(strNumbers);
-    console.log(p)
-  })
-}
-
-
-  
-  
-
- 
-
-
-
-valueButton.addEventListener('click', getValueAtr);
-
-// s.addEventListener('click', function() {
-//   
-//   return r
-// })
-
-const arr1 = ['1','-','2','*','5', '+', '4', '5'];
-let result = 0;
-
-export const actions = {
-  ymnojenie: '*',
-  delenie: '/',
-  plus: '+',
-  minus: '-'
-}
-
-export const actionsFunctions = {
-  [actions.ymnojenie]: ymnojenie,
-  [actions.delenie]: delenie,
-  [actions.plus]: plus,
-  [actions.minus]: minus
-}
-
-actionsFunctions[actions.minus]
-
-arr1.forEach((n, i) => {
-  if (i === 0) {
-    const callback = actions[arr1[i + 1]];
-    result = callback(+n, arr1[i + 2]);
-    return;
+    return
   }
-  if (isFinite(+n) && i > 2) {
-    const callback = actions[arr1[i - 1]] ?? plus;
-    result = callback(result, +n);
-  }
-});
 
-function plus(num, num2) {
-  return num + num2
+  //   if(resultEval[resultEval.length - 1] === '-' && resultEval[resultEval.length - 2] === '-'){ 
+  //   console.log(1)
+  // }
+
+  EmptyStr += event.target.textContent
+  firstTextArea.textContent = EmptyStr;
 }
 
-function minus(num, num2) {
-  return num - num2
-}
 
-function delenie(num, num2) {
-  return num / num2
-}
+wrapperForEvents.addEventListener('click', onTargetButton)
+cleanTextArea.addEventListener('click', function () {
 
-function ymnojenie(num, num2) {
-  return num * num2
-}
+  firstTextArea.textContent = '';
+  EmptyStr = '';
+  secondTextArea.textContent = '';
 
+})
+
+// let go = '12-----'
+// for(let i = 0; i < go.length; i++) {
+//   console.log(go[i])
+
+//   // if(go[i])
+// }
+
+
+
+// if(str[0]==='-') {
+//   str = ''
+// }
