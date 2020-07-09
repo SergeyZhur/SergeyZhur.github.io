@@ -1,70 +1,147 @@
 window.onload = loadStr;
 let input = document.querySelector('.inp')
 let valueCase = '';
+let baseDate = [];
 
-input.addEventListener('keydown', function (event) {
+console.log(loadStr())
+input.addEventListener('keydown', function(event) {
+ 
+  if(event.keyCode === 13) {
+   if (input.value === '') return
 
-  if (event.keyCode === 13) {
+    
+    valueCase = valueCase + ',' + input.value;
+    
+    let valueInArray = valueCase.split(',')
 
-    valueCase = input.value;
-    // console.log(valueCase)
+valueInArray = valueInArray.filter((n) => {
+return n != ''
+});
+
+  
+    // baseDate.push(valueCase)
+    
+   
     input.value = '';
-    // localStorage.setItem(obj.key, valueCase);
-    let obj = {
-      name: `${valueCase}`
-    }
-    input.insertAdjacentHTML('afterend', `<div>${valueCase}</div>`);
+    
 
-    let json = JSON.stringify(obj);
-    // console.log(json)
-    //Запишем в localStorage с ключом obj:
-    localStorage.setItem('obj', json);
+  let obj = {
+    name: valueInArray
+  }
+// NENNENNENEEN
+ // loadStr()
+ // obj.name = obj.name[obj.name.concat(loadStr())]
+  // console.log(obj)
+  
+    
+//     var alpha = ["a", "b", "c"];
+
+// var numeric = [1, 2, 3];
+
+ 
+
+// // создает массив ["a", "b", "c", 1, 2, 3];
+
+// var alpha = alpha.concat(numeric);
+// console.log(alpha)
+    
+    
+   let json = JSON.stringify(obj);
+      localStorage.setItem('obj', json);
+   // let xm = obj.name[obj.name.length - 1]; <= это более простой вариант вычета последнего элемента массива , чем который указан ниже, писать полный путь нужно [obj.name.length - 1]
+    let xm = obj?.name[obj?.name?.length - 1] ?? '';
+    
+    
+//     if(obj.name.length === 1) {
+//   console.log(8)
+// }
+//     for(let i = 0; i.obj.name.length; i++) {
+//         if( xm === undefined && obj.name.length === i ) {
+
+//     return
+     
+//   } 
+//     }
 
 
-
-    // if(obj.name === )
-    // console.log(obj.name)
-    // localStorage.setItem(obj.name);
-
+          
+    console.log(obj.name)
+       input.insertAdjacentHTML('afterend',`<div>${obj.name.pop()}</div>`);
 
   }
-
+  
 })
 
 function loadStr() {
+ 
+let jsonOfLocalStorage = localStorage.getItem('obj');
 
-  // return localStorage.getItem(obj.name)
+let obj = JSON.parse(jsonOfLocalStorage);
+ 
+   if (!obj) {
+ 
+    return obj = {}
+     
+   }
 
-  let jsonOfLocalStorage = localStorage.getItem('obj');
+return obj.name
+ 
 
-  //Преобразуем их обратно в объект JavaScript:
-  let obj = JSON.parse(jsonOfLocalStorage);
-
-  if (!obj) {
-    // console.log(1)
-    obj = {}
-  }
-  // console.log(obj)
-  // if(obj === null) {
-  //   return 
-  // }
-
-  return obj.name
-
-  // console.log(obj);
-  // alert( localStorage.getItem('test') )
-  // console.log(1)
+// console.log(obj)
 }
-// console.log(loadStr())
 
-// function goga(b) {
 
-// }
-// console.log(goga(loadStr()))
 let data = loadStr()
-if (data) {
-  input.insertAdjacentHTML('afterend', `<div>${loadStr()}</div>`)
+
+for(let i = 0; i<data.length; i++) {
+
+  data.reverse();
+
+  input.insertAdjacentHTML('afterend',`<div>${data[i]}</div>`)
 }
 
 
-// console.log(loadStr())
+
+
+
+
+
+function User(name) {
+  this.name = name;
+  this.isAdmin = false;
+}
+
+let user = new User("Вася");
+let op = new User(1)
+// console.log(user.name)
+// console.log(op.name)
+
+let ms = {key:1};
+// console.log(m)
+// m.key = 3;
+// m.key = 33;
+// console.log(m)
+
+// console.log(Object.keys(m).length)
+// длинна обьекта
+// for(let i = 0; i <= Object.keys(ms).length; i++) {
+  
+// // console.log(Object.keys(ms).length)
+//   // console.log(i)
+  
+//   // console.log(i)
+//  // ms.[i]= 'kek';
+// //   break;
+// // console.log(ms)
+// //   for (let key in m) {
+	  
+// //     console.log(m[i] = keys)
+// // }
+// }
+// console.log(ms)
+// console.log(m)
+// console.log(Object.keys(m).length)
+// console.log(m)
+// for (let key in obj) {
+// 	result[obj[key]] = key;
+// }
