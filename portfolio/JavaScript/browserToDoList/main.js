@@ -3,7 +3,12 @@ let input = document.querySelector('.inp')
 let valueCase = '';
 let baseDate = [];
 
-console.log(loadStr())
+// console.log(loadStr())
+
+
+
+
+
 input.addEventListener('keydown', function(event) {
  
   if(event.keyCode === 13) {
@@ -29,11 +34,16 @@ return n != ''
     name: valueInArray
   }
 // NENNENNENEEN
- // loadStr()
- // obj.name = obj.name[obj.name.concat(loadStr())]
+ // loadStr() 
+//     let newArrOld = loadStr().map(function (elem) {
+//       return elem;
+//     });
+
+//     console.log(newArrOld)
+
+//  obj.name[obj.name.concat(newArrOld)]
   // console.log(obj)
   
-    
 //     var alpha = ["a", "b", "c"];
 
 // var numeric = [1, 2, 3];
