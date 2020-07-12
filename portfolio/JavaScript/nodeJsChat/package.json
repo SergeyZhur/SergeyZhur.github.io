@@ -1,0 +1,28 @@
+{
+  "name": "node-chat",
+  "version": "1.0.0",
+  "description": "nodejs-chat",
+  "main": "server.js",
+  "engines": {
+    "node": "9.9.0"
+  },
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "socketio",
+    "vuejs",
+    "chat"
+  ],
+  "author": "Sergey Zhuravlev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
