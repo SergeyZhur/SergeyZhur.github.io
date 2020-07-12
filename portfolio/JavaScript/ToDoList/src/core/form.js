@@ -4,60 +4,63 @@ export class Form {
     this.controls = controls
   }
 
-value() {
-  const value = {}
+  value() {
+    const value = {}
 
-  Object.keys(this.controls).forEach(control => {
-    value[control] = this.form[control].value
-  })
-  return value
-}
+    Object.keys(this.controls).forEach(control => {
+      value[control] = this.form[control].value
+    })
 
-clear() {
-  Object.keys(this.controls).forEach(control => {
-    this.form[control].value = ''
-  })
-}
+    return value
+  }
 
-isValid() {
-  let isFormValid = true
+  clear() {
+    Object.keys(this.controls).forEach(control => {
+      this.form[control].value = ''
+    })
+  }
 
-Object.keys(this.controls).forEach(control => {
-  const validators = this.controls[control]
+  isValid() {
+    let isFormValid = true
 
-  let isValid = true
-  validators.forEach(validator => {
-    isValid = validator(this.form[control].value) && isValid
-  })
-// if(!isValid) {
-//   setError(this.form[control])
-// } else {
-//   clearError(this.form[control])
-// }
+    Object.keys(this.controls).forEach(control => {
+      const validators = this.controls[control]
 
-isValid ? clearError(this.form[control]) : setError(this.form[control])
+      let isValid = true
+      validators.forEach(validator => {
+        isValid = validator(this.form[control].value) && isValid
+      })
+      // if(!isValid) {
+      //   setError(this.form[control])
+      // } else {
+      //   clearError(this.form[control])
+      // }
 
-isFormValid = isFormValid && isValid
+      isValid ? clearError(this.form[control]) : setError(this.form[control])
 
-})
+      isFormValid = isFormValid && isValid
 
-  return isFormValid
-}
+    })
+
+    return isFormValid
+  }
 
 }
 
 function setError($control) {
-clearError($control)
-const error = '<p class = "validation-error">Введите корректное значение</p>'
-$control.classList.add('invalid')
-$control.insertAdjacentHTML('afterend', error)
+  clearError($control)
+
+  const error = '<p class = "validation-error">Введите корректное значение</p>'
+
+  $control.classList.add('invalid')
+  $control.insertAdjacentHTML('afterend', error)
 }
 
 function clearError($control) {
-$control.classList.remove('invalid')
 
-
-if($control.nextSibling) {
-$control.closest('.form-control').removeChild($control.nextSibling)
-}
+  $control.classList.remove('invalid')
+  
+  if ($control.nextSibling) {
+    $control.closest('.form-control').removeChild($control.nextSibling)
+  }
 }
