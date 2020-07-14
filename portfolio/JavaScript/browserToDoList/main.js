@@ -1,4 +1,7 @@
 const input = document.querySelector('input');
+const button = document.querySelector('button');
+const wrapperForDiv = document.querySelector('.wrapper');
+
 let stringTransformationInArray = [];
 
 
@@ -31,7 +34,7 @@ const onButtonEnter = (event) => {
 
     stringTransformationInArray = stringTransformationInArray.concat(inputValueTrim);
 
-    input.insertAdjacentHTML('afterend', `<div>${inputValueTrim}</div>`);
+    wrapperForDiv.insertAdjacentHTML('afterBegin', `<div class="item">${inputValueTrim}</div>`);
     // создаю div и кладу в него последний элемент массива
 
     fetchToLocalStorage(stringTransformationInArray);
@@ -50,9 +53,15 @@ const getArrayValues = () => {
   if (arrayOfLocalStorage) {
 
     stringTransformationInArray.forEach(function (item) {
-      input.insertAdjacentHTML('afterend', `<div>${item}</div>`);
+      wrapperForDiv.insertAdjacentHTML('afterBegin', `<div class="item">${item}</div>`);
     })
   }
 }
 
 getArrayValues()
+
+button.addEventListener('click', function () {
+  localStorage.clear()
+  wrapperForDiv.remove()
+})
+// очистка локал стореджа и удаление обертки с div значениями
