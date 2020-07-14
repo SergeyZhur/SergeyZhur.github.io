@@ -10,9 +10,7 @@
 }
 
 .text-result {
-  /* background:blue; */
   height: 40px;
-  /*   margin-bottom: 10px; */
   margin-top: 20px;
   overflow: hidden;
   font-size: 30px;
@@ -33,10 +31,9 @@
   padding-top: 15px;
 }
 
-.wrapper-btn__item-line {
+/* .wrapper-btn__item-line {
   margin-top: 10px;
-  /* border-top: 3px red solid; */
-}
+} */
 
 .wrapper-result {
   border: solid red 5px;

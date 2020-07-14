@@ -1,157 +1,58 @@
-window.onload = loadStr;
-let input = document.querySelector('.inp')
-let valueCase = '';
-let baseDate = [];
-
-// console.log(loadStr())
+const input = document.querySelector('input');
+let stringTransformationInArray = [];
 
 
+const l = (element) => {
+  console.log(element)
+};
+// функция вместо console.log() сделал короткую
 
 
+const fetchToLocalStorage = (arr) => {
+  let json = JSON.stringify(arr);
 
-input.addEventListener('keydown', function(event) {
- 
-  if(event.keyCode === 13) {
-   if (input.value === '') return
+  localStorage.setItem('arrayValue', json);
+}
+// превращение массива в строку и запись в локал сторедж
 
-    
-    valueCase = valueCase + ',' + input.value;
-    
-    let valueInArray = valueCase.split(',')
 
-valueInArray = valueInArray.filter((n) => {
-return n != ''
-});
+const onButtonEnter = (event) => {
+  // при нажатие enter(13 номер кнопки) получаю значение инпута и чищу поле
 
-  
-    // baseDate.push(valueCase)
-    
-   
+  if (event.keyCode === 13) {
+
+    const inputValueTrim = input.value.trim();
+
+    if (inputValueTrim === '') {
+      return
+    }
+
     input.value = '';
-    
 
-  let obj = {
-    name: valueInArray
+    stringTransformationInArray = stringTransformationInArray.concat(inputValueTrim);
+
+    input.insertAdjacentHTML('afterend', `<div>${inputValueTrim}</div>`);
+    // создаю div и кладу в него последний элемент массива
+
+    fetchToLocalStorage(stringTransformationInArray);
   }
-// NENNENNENEEN
- // loadStr() 
-//     let newArrOld = loadStr().map(function (elem) {
-//       return elem;
-//     });
-
-//     console.log(newArrOld)
-
-//  obj.name[obj.name.concat(newArrOld)]
-  // console.log(obj)
-  
-//     var alpha = ["a", "b", "c"];
-
-// var numeric = [1, 2, 3];
-
- 
-
-// // создает массив ["a", "b", "c", 1, 2, 3];
-
-// var alpha = alpha.concat(numeric);
-// console.log(alpha)
-    
-    
-   let json = JSON.stringify(obj);
-      localStorage.setItem('obj', json);
-   // let xm = obj.name[obj.name.length - 1]; <= это более простой вариант вычета последнего элемента массива , чем который указан ниже, писать полный путь нужно [obj.name.length - 1]
-    let xm = obj?.name[obj?.name?.length - 1] ?? '';
-    
-    
-//     if(obj.name.length === 1) {
-//   console.log(8)
-// }
-//     for(let i = 0; i.obj.name.length; i++) {
-//         if( xm === undefined && obj.name.length === i ) {
-
-//     return
-     
-//   } 
-//     }
+};
 
 
-          
-    console.log(obj.name)
-       input.insertAdjacentHTML('afterend',`<div>${obj.name.pop()}</div>`);
+input.addEventListener('keydown', onButtonEnter)
 
+
+const getArrayValues = () => {
+
+  let arrayOfLocalStorage = localStorage.getItem('arrayValue');
+  stringTransformationInArray = JSON.parse(arrayOfLocalStorage) || [];
+
+  if (arrayOfLocalStorage) {
+
+    stringTransformationInArray.forEach(function (item) {
+      input.insertAdjacentHTML('afterend', `<div>${item}</div>`);
+    })
   }
-  
-})
-
-function loadStr() {
- 
-let jsonOfLocalStorage = localStorage.getItem('obj');
-
-let obj = JSON.parse(jsonOfLocalStorage);
- 
-   if (!obj) {
- 
-    return obj = {}
-     
-   }
-
-return obj.name
- 
-
-// console.log(obj)
 }
 
-
-let data = loadStr()
-
-for(let i = 0; i<data.length; i++) {
-
-  data.reverse();
-
-  input.insertAdjacentHTML('afterend',`<div>${data[i]}</div>`)
-}
-
-
-
-
-
-
-
-function User(name) {
-  this.name = name;
-  this.isAdmin = false;
-}
-
-let user = new User("Вася");
-let op = new User(1)
-// console.log(user.name)
-// console.log(op.name)
-
-let ms = {key:1};
-// console.log(m)
-// m.key = 3;
-// m.key = 33;
-// console.log(m)
-
-// console.log(Object.keys(m).length)
-// длинна обьекта
-// for(let i = 0; i <= Object.keys(ms).length; i++) {
-  
-// // console.log(Object.keys(ms).length)
-//   // console.log(i)
-  
-//   // console.log(i)
-//  // ms.[i]= 'kek';
-// //   break;
-// // console.log(ms)
-// //   for (let key in m) {
-	  
-// //     console.log(m[i] = keys)
-// // }
-// }
-// console.log(ms)
-// console.log(m)
-// console.log(Object.keys(m).length)
-// console.log(m)
-// for (let key in obj) {
-// 	result[obj[key]] = key;
-// }
+getArrayValues()
