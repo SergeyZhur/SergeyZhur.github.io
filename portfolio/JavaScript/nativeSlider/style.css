@@ -1,0 +1,59 @@
+.wrapper {
+  position: relative;
+}
+
+.item-1 {
+  background-image: url(http://www.fonstola.ru/download.php?file=201303/2560x1600/fonstola.ru-91125.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+}
+
+.item-2 {
+
+  background-image: url(https://www.tokkoro.com/picsup/1496170-tiger.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+}
+
+.item-3 {
+
+  background-image: url(https://www.nastol.com.ua/download.php?img=201304/2560x1600/nastol.com.ua-46622.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+}
+
+.next {
+  position: absolute;
+  right: 50px;
+  top: 150px;
+  width: 100px;
+  height: 40px;
+}
+
+.back {
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 100px;
+  height: 40px;
+}
+
+/* .item-1, .item-2,.item-3 {
+  display:none;
+} */
+
+
+.block {
+  display: block
+}
+
+/*  */
+.hide {
+  display: none;
+}
