@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.element-for-text::before {
+    content: ' ';
+    position: absolute;
+    background: #408bd3;
+    width: 10px;
+    margin-top: 37px;
+    height: 10px;
+    margin-left: -25px;
+}
+
+.element-for-text::after {
+       content: ' ';
+       position: absolute;
+       background: #408bd3;
+       width: 350px;
+       margin-top: 37px;
+       height: 10px;
+       margin-left: 28px;
+}
+
+@import 'components_scss/header.scss';
+@import 'components_scss/slider.scss';
+@import 'components_scss/form.scss';
+@import 'components_scss/footer.scss';
+
+// называть файлы с _n чтобы соеденить через импорт и в 1 файл
+
+@media (max-width: 1200px) {
+
+.element-for-text::after {
+  display: none;
+}
+
+.element-for-text {
+  margin: 0 auto;
+}
+
+button.slick-prev.slick-arrow::before {
+display: none;
+}
+
+button.slick-next.slick-arrow::before {
+display: none;
+}
+
+.slider {
+  display: none;
+}
+
+}
+
+@media (max-width: 1100px) {
+
+.wrapper-form-end-timer {
+  flex-wrap: wrap;
+}
+
+}

@@ -1,0 +1,36 @@
+.header {
+  max-width: 2000px;
+  background: #f6f6f6;
+}
+
+.header__title {
+  max-width: 1000px;
+  text-align: center;
+  position: relative;
+  font-size: 48px;
+  line-height: 1.2;
+  color: #313131;
+  padding-top: 70px;
+  padding-bottom: 60px;
+}
+
+
+.header-background__sale {
+  height: 380px;
+  background-image: url(img/bg_header.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header__texts {
+  text-align: center;
+  margin-top: 75px;
+  padding-bottom: 70px;
+  font-size: 18px;
+  line-height: 1.333;
+}
+
+.header__texts--element-green {
+  color: #94d38e;
+}

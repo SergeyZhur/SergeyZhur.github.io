@@ -1,0 +1,154 @@
+.footer {
+   height: 850px;
+   background-image: url(img/footer_bg_new.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-top: 10px;
+}
+
+.footer__bg,
+.footer__text,
+.footer__paragraph {
+   position: relative;
+}
+
+.footer__bg {
+   max-width: 1000px;
+   background: #afc7d9;
+   opacity: 0.259;
+   height: 90px;
+   z-index: 2;
+   margin: 0 auto;
+}
+
+.footer__text {
+   max-width: 1000px;
+   z-index: 10;
+   text-align: center;
+   margin-top: -90px;
+   margin-left: auto;
+   margin-right: auto;
+   font-size: 38px;
+   line-height: 1.2;
+   text-transform: uppercase;
+}
+
+.footer__paragraph {
+   max-width: 1000px;
+   z-index: 5;
+   font-size: 38px;
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   text-transform: uppercase;
+   line-height: 1.2;
+}
+
+.footer__paragraph:before {
+   content: ' ';
+   position: absolute;
+   width: 115px;
+   margin-top: 25px;
+   height: 1px;
+   left: 60px;
+   background: #353535;
+}
+
+.footer__paragraph:after {
+   content: ' ';
+   position: absolute;
+   width: 115px;
+   margin-top: 25px;
+   height: 1px;
+   right: 60px;
+   background: #353535;
+}
+
+.footer__text-wrapper {
+   max-width: 1000px;
+   text-align: center;
+   margin: 0 auto;
+}
+
+.footer__text--two {
+   text-align: center;
+   margin-top: 35px;
+   color: #ffffff;
+   font-size: 24px;
+   padding-left: 155px;
+   padding-right: 155px;
+}
+
+.footer__element-green {
+   background: #76ca6e;
+}
+
+// Start TIMER
+.timer-dots {
+   margin-left: 5px;
+   margin-right: 5px;
+   margin-top: auto;
+   margin-bottom: auto;
+}
+
+.timer-dot {
+   width: 5px;
+   height: 5px;
+   border-radius: 50%;
+   background: #2e3236;
+}
+
+.timer-dot__two {
+   margin-top: 3px;
+}
+
+.timer-wrapper {
+   text-align: center;
+   text-transform: uppercase;
+   width: 520px;
+   height: 300px;
+   color: #2b4152;
+   margin-top: 150px;
+}
+
+.timer-items {
+   display: flex;
+   justify-content: center;
+}
+
+.timer-item {
+   width: 65px;
+   height: 65px;
+   background: #2a4051;
+   border-radius: 50%;
+   text-transform: lowercase;
+   position: relative;
+   z-index: 1;
+}
+
+.timer-item__one-text {
+   color: #202223;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   position: relative;
+   z-index: 55;
+   font-size: 24px;
+}
+
+// END TIMER
+
+.footer__end-text {
+   text-align: center;
+   margin-top: 150px;
+   font-size: 18px;
+}
