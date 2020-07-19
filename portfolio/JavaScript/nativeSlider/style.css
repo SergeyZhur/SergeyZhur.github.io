@@ -44,9 +44,10 @@
   height: 40px;
 }
 
-/* .item-1, .item-2,.item-3 {
-  display:none;
-} */
+.item-2,
+.item-3 {
+  display: none;
+}
 
 
 .block {

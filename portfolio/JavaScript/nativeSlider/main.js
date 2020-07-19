@@ -4,121 +4,82 @@ const back = document.querySelector('.back');
 
 let count = 0;
 
-// .hide {
-//   display:none;
-// }
-// .block {
-//   display:block
-// }
 
-// if(allImages[0].classList.contains("active")) {
-//    allImages[0].classList.add('block')
-//    }
+function plus() {
 
-// ["Клубника", "Банан", "Манго"]
-
-// var pos = fruits.indexOf('Банан');
-// // 1
-
-function nextSlide() {
-  count++
-  if (count === 1) {
-    allImages[count].classList.add('block');
-  }
-  console.log(count)
-  if (count === 2 && count != 1) {
-    allImages[1].classList.add('hide');
-    allImages[count].classList.add('block');
-    // console.log(count)
-  }
-  if (count === 2) {
+  if (count <= 0) {
     count = 0;
-    allImages[2].classList.add('hide');
-    allImages[0].classList.add('block');
-
   }
-  // allImages[count-1].classList.add('none')
+
+  count++
+
+  if (count === allImages.length) {
+
+    count = 0;
+
+    allImages[count].style.display = 'block';
+    allImages[allImages.length - 1].style.display = 'none';
+
+    return
+  }
+
+  allImages[count - 1].style.display = 'none';
+  allImages[count].style.display = 'block';
 
 }
 
-function backSlide() {
+function minus() {
 
+  count--;
 
-  count--
-  console.log(allImages[count])
   if (count >= 0) {
-    allImages[count].classList.add('block');
+
+    allImages[count + 1].style.display = 'none';
+    allImages[count].style.display = 'block';
+  }
+
+  if (count < 0 && count > -3) {
+
+    count = allImages.length - 1;
+
+    allImages[0].style.display = 'none';
+    allImages[count].style.display = 'block';
   }
 }
 
-
-next.addEventListener('click', nextSlide)
-back.addEventListener('click', backSlide)
-// next.addEventListener('click', function() {
-//   for(let i = 0; i<allImages.length; i++) {
-//   if(allImages[0]) {
-//     allImages[count].style.display = 'block';
-//     // allImages[count-1].style.display = 'none';
-//   }
-// if(allImages[1]) {
-//   allImages[0].style.display = 'none';
-//    allImages[1].style.display = 'block';
-//    return 
-// }
-//    if(allImages[2]) {
-//        allImages[1].style.display = 'none';
-//    allImages[2].style.display = 'block';
-//     }
-// }
-// })
+next.addEventListener('click', plus);
+back.addEventListener('click', minus)
 
 
+// Вариант 2 
 
-// next.addEventListener('click', function() {
+// __________________________________________________________________________________________
+// const allImages = document.querySelectorAll('.item');
+// const next = document.querySelector('.next');
+// const back = document.querySelector('.back');
 
-//   if(allImages.length <= 3) {
-//   count++
-//     // console.log(count)
-//     allImages[count].style.display = 'block';
-//     allImages[count-1].style.display = 'none';
+// let count = 0;
 
+
+// function plus() {
+//   allImages[count].style.display = 'none';
+
+//   count = count === allImages.length - 1
+//     ? 0
+//     : count + 1;
+
+//   allImages[count].style.display = 'block';
 // }
 
-// })
+// function minus() {
+//   allImages[count].style.display = 'none';
 
-// back.addEventListener('click', function() {
+//   count = count === 0
+//     ? allImages.length - 1
+//     : count - 1;
 
-//   if(allImages.length >= 3) {
-//   count--
-//     console.log(count)
-//     allImages[count-1].style.display = 'none';
-//     allImages[count].style.display = 'block';
-
+//   allImages[count].style.display = 'block';
 // }
 
-// })
-
-// next.addEventListener('click', function() {
-//   console.log(count)
-//   if(count++ <=1) {
-//     allImages[count].style.display = 'block';
-//     allImages[0].style.display = 'none';
-
-//      console.log()
-//   }
-
-
-// })
-
-
-// back.addEventListener('click', function() {
-//   // console.log(count)
-//   if(count <=1) {
-//     allImages[0].style.display = 'block';
-//     allImages[count].style.display = 'none';
-
-//      console.log()
-//   }
-
-
-// })
+// next.addEventListener('click', plus);
+// back.addEventListener('click', minus)
