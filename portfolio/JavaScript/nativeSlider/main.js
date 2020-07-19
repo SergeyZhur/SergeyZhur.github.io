@@ -1,12 +1,12 @@
 const allImages = document.querySelectorAll('.item');
 const next = document.querySelector('.next');
 const back = document.querySelector('.back');
-
+const w = document.querySelector('.item');
 let count = 0;
 
 
 function plus() {
-
+ w.classList.add('t');
   if (count <= 0) {
     count = 0;
   }

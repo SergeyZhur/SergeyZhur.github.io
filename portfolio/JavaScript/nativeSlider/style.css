@@ -1,5 +1,6 @@
 .wrapper {
   position: relative;
+        transition:0.6s ease;
 }
 
 .item-1 {
@@ -57,4 +58,7 @@
 /*  */
 .hide {
   display: none;
+}
+.t {
+  transition: 0,5s;
 }
