@@ -1,0 +1,45 @@
+{
+  "posts": [{
+      "image": "1.jpg",
+      "name": "json-server32",
+      "price": 100,
+      "article": "Т1",
+      "available": true
+    },
+    {
+      "image": "4.jpg",
+      "name": "json-server125",
+      "price": 1200,
+      "article": "T21",
+      "available": true
+    },
+    {
+      "image": "2.jpg",
+      "name": "json-server121",
+      "price": 12200,
+      "article": "T13",
+      "available": true
+    },
+    {
+      "image": "33.jpg",
+      "name": "json-server3wqwq2",
+      "price": 1050,
+      "article": "Tff1",
+      "available": true
+    },
+    {
+      "image": "121.jpg",
+      "name": "json-server32qw",
+      "price": 1020,
+      "article": "Ts1",
+      "available": true
+    },
+    {
+      "image": "12111.jpg",
+      "name": "json-server3w2",
+      "price": 1003,
+      "article": "T190",
+      "available": true
+    }
+  ]
+}
