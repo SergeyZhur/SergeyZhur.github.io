@@ -9,7 +9,12 @@
 li {
   list-style-type: none;
   /* Убираем маркеры */
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  
+}
+li:hover {
+  transition:0.5s;
+    margin: 15px;
 }
 
 a {
@@ -20,6 +25,7 @@ a {
 a:hover {
   color: blue;
   text-decoration: underline;
+
 }
 
 h6 {
@@ -29,6 +35,13 @@ h6 {
   margin-bottom: 20px;
   text-decoration: underline;
 }
+
+h1 {
+    padding: 15px;
+    color: #FFFF00;
+    border-radius: 55%;
+    border: solid yellow 4px;
+    }
 
 .main-wrapper {
   padding-top: 25px;
